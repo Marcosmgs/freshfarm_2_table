@@ -31,7 +31,68 @@
     <title>Fresh Farm 2 Table {% block extra_title %}{% endblock %} </title>
   </head>
   <body>
-    <header class="container-fluid fixed-top"></header>
+    <header class="container-fluid fixed-top">
+      <div id="topnav" class="row bg-white pt-lg-2 d-none d-lg-flex">
+        <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center text-lg-left">
+          <a href="{% url 'home' %}" class="d-inline nav-link main-logo-link">
+            <img src="/media/logo.jpeg" class="rounded float-left img-fluid logo-img" alt="logo">
+            <h2 class="logo-font text-black my-0"><strong>FreshFarm</strong>2Table</h2>
+          </a>
+        </div>
+        <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
+          <form method="GET" action="">
+            <div class="input-group w-100">
+                <input class="form-control border rounded-left" type="text" name="q" placeholder="Search our site">
+                <div class="input-group-append">
+                    <button class="form-control btn btn-color border border-color rounded-right" type="submit">
+                        <span class="icon">
+                            <i class="fas fa-search"></i>
+                        </span>
+                    </button>
+                </div>
+            </div>
+          </form>
+        </div>
+        <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
+          <ul class="list-inline list-unstyled text-center text-lg-right my-0">
+            <li class="list-inline-item dropdown">
+              <a class="text-color nav-link" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <div class="text-center">
+                    <div><i id="account-i-color" class="fas fa-user fa-lg"></i></div>
+                    <p class="my-0">My Account</p>
+                </div>
+              </a>
+              <div class="dropdown-menu border-0" aria-labelledby="user-options">
+                {% if request.user.is_authenticated %}
+                    {% if request.user.is_superuser %}
+                        <a href="" class="dropdown-item">Product Management</a>
+                    {% endif %}
+                    <a href="" class="dropdown-item">My Profile</a>
+                    <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
+                {% else %}
+                    <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
+                    <a href="{% url 'account_login' %}" class="dropdown-item">Login</a>
+                {% endif %}
+              </div>
+            </li>
+            <li class="list-inline-item">
+              <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-color{% endif %} nav-link" href="">
+                <div class="text-center">
+                    <div><i id="bag-i-color" class="fas fa-shopping-bag fa-lg"></i></div>
+                    <p class="my-0">
+                        {% if grand_total %}
+                            ${{ grand_total|floatformat:2 }}
+                        {% else %}
+                            $0.00
+                        {% endif %}
+                    </p>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
 
     {% if messages %}
       <div class="message-container"></div>

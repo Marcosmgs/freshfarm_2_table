@@ -27,12 +27,20 @@ body {
 
 /* Colours */
 
+#fav-i-color{
+    color: #E55B7E;
+}
+
 #bag-i-color{
     color: #3E5336;
 }
 
 #account-i-color{
     color: #F6DA73;
+}
+
+#search-i-color{
+    color: #948F47;
 }
 
 .btn-color {
@@ -48,53 +56,67 @@ body {
 }
 
 .border-color {
-    border: 1px solid gray !important;
+    border: 1px solid grey !important;
 }
 
 .text-color {
     color: #000 !important;
 }
 
-.logo-font {
-    text-transform: uppercase;
-    font-size: 1.8rem;
-    letter-spacing: 1px;
+.bg-color {
+    background: #F6DA73 !important;
 }
 
-.message-font {
-    font-size: 1.4rem;
+#banner h4 {
+    font-size: 1.2rem;
+}
+
+.logo-font {
     text-transform: uppercase;
-    letter-spacing: 1px;
-    color: #F6F5F0;
 }
 
 .main-logo-link {
     width: fit-content;
 }
 
-.shop-now-button {
+.message-font {
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: white;
+}
+
+.shop-now-btn {
     background: #3E5336;
     color: white;
     min-width: 260px;
+    font-size: 1.2rem;
 }
 
-.shop-now-button:hover,
-.shop-now-button:active,
-.shop-now-button:focus{
+.shop-now-btn:hover,
+.shop-now-btn:active,
+.shop-now-btn:focus{
     background: #F6DA73;
-    color: black;
+    color: #3E5336;
 }
 
 /* -------------------------------- Media Queries */
 
-@media (max-width: 1200px) {
-    .logo-font {
-        font-size: 1.4rem;
+/* Slightly smaller nav on medium screens */
+@media (max-width: 1101px) {
+    /* .logo-font {
+        font-size: 1.2rem;
     }
     .message-font {
         font-size: 1.1rem;
+    } */
+    .font-nav{
+        font-size: 0.9rem;
     }
-        
+    #nav-list {
+        padding-left: 0;
+        padding-right: 0;
+    }    
 }
   
 /* Slightly larger container on xl screens */

@@ -25,6 +25,13 @@ body {
     width: 1.5rem;
 }
 
+#social-icon, #social-icon i {
+    padding: 0px 15px 0px;
+    font-size: 1.5rem;
+    color: #000;
+    margin: 5px 0px 5px;
+}
+
 /* Colours */
 
 #fav-i-color{
@@ -41,6 +48,11 @@ body {
 
 #search-i-color{
     color: #948F47;
+}
+
+.footer-color{
+    background: #F6DA73;
+    color: #000;
 }
 
 .btn-color {
@@ -69,6 +81,10 @@ body {
 
 #banner h4 {
     font-size: 1.2rem;
+}
+
+#footer-cr{
+    font-size: 0.9rem;
 }
 
 .logo-font {
@@ -104,12 +120,6 @@ body {
 
 /* Slightly smaller nav on medium screens */
 @media (max-width: 1101px) {
-    /* .logo-font {
-        font-size: 1.2rem;
-    }
-    .message-font {
-        font-size: 1.1rem;
-    } */
     .font-nav{
         font-size: 0.9rem;
     }
@@ -138,5 +148,21 @@ body {
 
     .header-container {
         padding-top: 164px;
+    }
+}
+
+/* Slightly smaller nav on XS mobile screens */
+@media (max-width: 358px) {
+    #grand-total-mobile {
+        font-size: 0.5rem;
+    }
+    #banner h4 {
+        font-size: 0.9rem;
+    }
+    .navbar {
+        padding: 0rem;
+    }
+    #footer-cr{
+        font-size: 0.7rem;
     }
 }

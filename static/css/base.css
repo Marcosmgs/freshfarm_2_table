@@ -84,7 +84,7 @@ body {
 }
 
 #footer-cr{
-    font-size: 0.9rem;
+    font-size: 0.8rem;
 }
 
 .logo-font {
@@ -143,6 +143,11 @@ a.category-badge > span.badge:hover {
     cursor: pointer;
     color: #3E5336;
 }
+
+.footer {
+    height: 55px;
+}
+
 /* -------------------------------- Media Queries */
 
 /* Slightly smaller nav on medium screens */

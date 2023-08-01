@@ -127,7 +127,7 @@ body {
 }
 
 a.category-badge > span.badge:hover {
-    background: #212529 !important;
+    background: #3E5336 !important;
     color: #fff !important;
 }
 
@@ -141,6 +141,7 @@ a.category-badge > span.badge:hover {
 
 .btt-link {
     cursor: pointer;
+    color: #3E5336;
 }
 /* -------------------------------- Media Queries */
 

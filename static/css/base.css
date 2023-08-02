@@ -104,9 +104,8 @@ body {
 
 .shop-now-btn {
     background: #3E5336;
-    color: white;
-    min-width: 260px;
-    font-size: 1.2rem;
+    color: white !important;;
+    border: 1px solid #3E5336;
 }
 
 .shop-now-btn:hover,
@@ -115,6 +114,20 @@ body {
     background: #F6DA73;
     color: #3E5336;
 }
+
+.btn-outline-green {
+    background: white;
+    color: #3E5336 !important;
+    border: 1px solid #3E5336;
+}
+
+.btn-outline-green:hover,
+.btn-outline-green:active,
+.btn-outline-green:focus {
+    background: #3E5336;
+    color: white !important;
+}
+
 
 .overlay {
 	height: 100%;

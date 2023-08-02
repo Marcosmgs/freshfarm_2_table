@@ -21,11 +21,72 @@
             </div>
         </div>
 
-        <div class="row">
-            <div class="col">
+        <div class="row justify-content-md-center" >
+            <div class="col-12 col-md-auto col-lg-auto">
                 {% if bag_items %}
-                    <div class="table-responsive rounded">
-                        {{ bag_items }}
+                    <div class="table-responsive rounded mb-5">
+                        <div class="table-responsive rounded">
+                            <table class="table table-sm table-borderless">
+                                <thead class="text-color">
+                                    <tr>
+                                        <th scope="col">Product Info</th>
+                                        <th scope="col"></th>
+                                        <th scope="col">Price</th>
+                                        <th scope="col">Qty</th>
+                                        <th scope="col">Subtotal</th>
+                                    </tr>
+                                </thead>
+    
+                                {% for item in bag_items %}
+                                    <tr>
+                                        <td class="p-3 w-25">
+                                            <img class="img-fluid rounded" src="{{ item.product.image.url }}">
+                                        </td>
+                                        <td class="py-3">
+                                            <p class="my-0"><strong>{{ item.product.name }}</strong></p>
+                                            <p class="my-0 small text-muted">SKU: {{ item.product.sku|upper }}</p>
+                                        </td>
+                                        <td class="py-3">
+                                            <p class="my-0">${{ item.product.price }}</p>
+                                        </td>
+                                        <td class="py-3 w-25">
+                                            <p class="my-0">{{ item.quantity }}{{ item.product.unity }}</p>
+                                        </td>
+                                        <td class="py-3">
+                                            <p class="my-0">${{ item.product.price }}</p>
+                                        </td>
+                                    </tr>
+                                {% endfor %}
+                                <tr>
+                                    <td colspan="5" class="pt-1 text-right">
+                                        <h6><strong>Bag Total: ${{ total|floatformat:2 }}</strong></h6>
+                                        <h6>Delivery: ${{ delivery|floatformat:2 }}</h6>
+                                        <h5 class="mt-1"><strong>Grand Total: ${{ grand_total|floatformat:2 }}</strong></h5>
+                                        {% if free_delivery_delta > 0 %}
+                                            <p class="mb-1 text-danger">
+                                                You could get free delivery by spending just <strong>${{ free_delivery_delta }}</strong> more!
+                                            </p>
+                                        {% endif %}
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="5" class="text-right">
+                                        <a href="{% url 'products' %}" class="btn btn-outline-green rounded-1 btn-md">
+                                            <span class="icon">
+                                                <i class="fas fa-chevron-left"></i>
+                                            </span>
+                                            <span class="text-uppercase"><strong>Keep Shopping</strong></span>
+                                        </a>
+                                        <a href="" class="btn shop-now-btn rounded-1 btn-md">
+                                            <span class="text-uppercase"><strong>Secure Checkout</strong></span>
+                                            <span class="icon">
+                                                <i class="fas fa-lock"></i>
+                                            </span>
+                                        </a>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
                     </div>
                 {% else %}
                     <p class="lead my-5 text-center">Your bag is empty.</p>

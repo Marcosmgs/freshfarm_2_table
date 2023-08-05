@@ -100,14 +100,17 @@ def toggle_favorite(request, product_id):
 
     return redirect(request.META['HTTP_REFERER'])
 
-# class MyBookmarks(generic.ListView):
-#     """
-#     This view allows a logged in user to view their favourite products.
-#     """
-#     model = Product
-#     template_name = 'my_favourite.html'
-#     paginate_by = 6
+def favorite_products(request):
+    user = request.user
+    favorite_products = Product.objects.filter(is_favorited=user)
+    for product in favorite_products:
+        product.favorited = False
+        if product.is_favorited.filter(id=request.user.id).exists():
+            product.favorited = True            
 
-#     def get_queryset(self):
-#         """Override get_queryset to filter by user favourites"""
-#         return Product.objects.filter(is_favorited=request.user.id)
+    
+    context = {
+        'favorite_products': favorite_products,
+    }
+    
+    return render(request, 'products/favorite_products.html', context)

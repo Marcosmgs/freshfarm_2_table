@@ -69,20 +69,22 @@
                                 </div>
                             </div>
 
-                            <div class="col mb-3 text-left">
+                            <div class="col mb-3">
                                 {% if product.favorited %}
                                 <a href="{% url 'toggle_favorite' product.id %}" class="text-decoration-none">
                                     <span>
-                                        <p class="text-center text-color mt-1 d-block"><small>My Fav</small>
-                                            <i id="fav-i-color" class="fas fa-heart fa-lg d-block"></i>
+                                        <p class="text-left text-color mt-1 d-inline">
+                                            <i id="fav-i-color" class="fas fa-heart fa-lg d-inline"></i>
+                                            <small> My Favourites</small>
                                         </p>
                                     </span>
                                 </a>
                                 {% else %}
                                 <a href="{% url 'toggle_favorite' product.id %}" class="text-decoration-none">
                                     <span>
-                                        <p class="text-center text-color mt-1 d-block"><small>My Fav</small>
-                                            <i class="far fa-heart fa-lg d-block"></i>
+                                        <p class="text-left text-color mt-1 d-inline">
+                                            <i class="far fa-heart fa-lg d-inline"></i>
+                                            <small> My Favourites</small>
                                         </p>
                                     </span>
                                 </a>

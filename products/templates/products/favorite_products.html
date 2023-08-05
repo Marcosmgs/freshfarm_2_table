@@ -1,0 +1,91 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_header %}
+    <div class="container header-container">
+        <div class="row">
+            <div class="col"></div>
+        </div>
+    </div>
+{% endblock %}
+
+
+{% block content %}
+    <div class="overlay"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col text-center mt-3">
+                <hr class="w-50 mb-1" style="border:1px solid black">
+                <h2 class="logo-font">Favourites Products</h2>
+                <hr class="w-50 mb-1" style="border:1px solid black">
+            </div>
+        </div>       
+        <div class="row justify-content-md-center justify-content-sm-center justify-content-lg-center justify-content-xl-center">
+            {% if favorite_products %}
+                {% for product in favorite_products %}
+                <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3 mb-5">
+                    <div id="image-card" class="card h-100 border-0">
+                        {% if product.image %}
+                        <a href="{% url 'product_detail' product.id %}">
+                            <img class="card-img-top img-fluid" src="{{ product.image.url }}" alt="{{ product.name }}">
+                        </a>
+                        {% else %}
+                        <a href="{% url 'product_detail' product.id %}">
+                            <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
+                        </a>
+                        {% endif %}
+                        <div class="card-body pb-0">
+                            <p class="mb-0">{{ product.name }}</p>
+                        </div>
+                        <div class="card-footer bg-white pt-0 border-0 text-left">
+                            <div class="row">
+                                <div class="col">
+                                    <span><p class="lead mb-0 text-left font-weight-bold">${{ product.price }} </p><small>per {{ product.unity }}.</small></span>
+                                    {% if product.category %}
+                                    <p class="small mt-1 mb-0">
+                                        <a class="text-muted" href="{% url 'products' %}?category={{ product.category.name }}">
+                                            <i class="fas fa-tag mr-1"></i>{{ product.category.friendly_name }}
+                                        </a>
+                                    </p>
+                                    {% endif %}
+                                </div>
+                            <div class="row">
+                                <div class="col">
+                                    {% if product.favorited %}
+                                    <a href="{% url 'toggle_favorite' product.id %}" class="text-decoration-none">
+                                        <span>
+                                            <p class="text-center text-danger mt-1 d-block"><small>remove</small>
+                                                <i id="fav-i-color" class="fas fa-heart fa-lg d-block"></i>
+                                            </p>
+                                        </span>
+                                    </a>
+                                    {% else %}
+                                    <a href="{% url 'toggle_favorite' product.id %}" class="text-decoration-none">
+                                        <span>
+                                            <p class="text-center text-color mt-1 d-block"><small>My Fav</small>
+                                                <i class="far fa-heart fa-lg d-block"></i>
+                                            </p>
+                                        </span>
+                                    </a>
+                                    {% endif %}
+                                </div>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            {% else %}
+            <div class="text-center">
+                <p class="lead mt-3">My Favourtite Products Session is empty</p>
+                <a href="{% url 'products' %}" class="btn btn-outline-green rounded-1 btn-md mt-5">
+                    <span class="icon">
+                        <i class="fas fa-chevron-left"></i>
+                    </span>
+                    <span class="text-uppercase">Back 2 Shopping</span>
+                </a>    
+            </div>
+            {% endif %}
+        </div>
+    </div>
+{% endblock %}

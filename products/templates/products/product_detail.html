@@ -42,7 +42,7 @@
                         {% csrf_token %}
                         <div class="form-row">
                             <div class="col-12">
-                                <p class="mt-3"><strong>Quantity:</strong></p>
+                                <p class="mt-1"><strong>Quantity:</strong></p>
                                 <div class="form-group w-50">
                                     <div class="input-group">
                                         <div class="input-group-prepend">
@@ -69,21 +69,36 @@
                                 </div>
                             </div>
 
+                            <div class="col mb-3 text-left">
+                                {% if product.favorited %}
+                                <a href="{% url 'toggle_favorite' product.id %}" class="text-decoration-none">
+                                    <span>
+                                        <p class="text-center text-color mt-1 d-block"><small>My Fav</small>
+                                            <i id="fav-i-color" class="fas fa-heart fa-lg d-block"></i>
+                                        </p>
+                                    </span>
+                                </a>
+                                {% else %}
+                                <a href="{% url 'toggle_favorite' product.id %}" class="text-decoration-none">
+                                    <span>
+                                        <p class="text-center text-color mt-1 d-block"><small>My Fav</small>
+                                            <i class="far fa-heart fa-lg d-block"></i>
+                                        </p>
+                                    </span>
+                                </a>
+                                {% endif %}
+                            </div>
+
                             <div class="col-12">
-                                <a href="{% url 'products' %}" class="btn btn-outline-green mt-5">
+                                <a href="{% url 'products' %}" class="btn btn-outline-green mb-4">
                                     <span class="icon">
                                         <i class="fas fa-chevron-left"></i>
                                     </span>
                                     <span class="text-uppercase">Keep Shopping</span>
                                 </a>
-                                <input type="submit" class="btn shop-now-btn text-uppercase mt-5" value="Add to Bag">
+                                <input type="submit" class="btn shop-now-btn text-uppercase mb-4" value="Add to Bag">
                             </div>
 
-                            <div class="col my-3">
-                                <a href="#" style="text-decoration: none">
-                                    <span><i id="fav-i-color" class="fas fa-heart fa-lg"></i><p class="text-center text-color ml-1 d-inline"><small>Add to My Favourite</small></p></span>
-                                </a>
-                            </div>        
                             <input type="hidden" name="redirect_url" value="{{ request.path }}">
                         </div>
                     </form>

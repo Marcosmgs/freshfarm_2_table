@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
 from django.db.models import Q
+from django.views import generic, View
 from django.db.models.functions import Lower
 from .models import Product, Category
 
@@ -12,6 +13,11 @@ def all_products(request):
     categories = None
     sort = None
     direction = None
+
+    for product in products:
+        product.favorited = False
+        if product.is_favorited.filter(id=request.user.id).exists():
+            product.favorited = True
 
     if request.GET:
         if 'sort' in request.GET:
@@ -26,11 +32,20 @@ def all_products(request):
                 direction = request.GET['direction']
                 if direction == 'desc':
                     sortkey = f'-{sortkey}'
-            products = products.order_by(sortkey)        
+            products = products.order_by(sortkey)
+            for product in products:
+                product.favorited = False
+                if product.is_favorited.filter(id=request.user.id).exists():
+                    product.favorited = True            
 
         if 'category' in request.GET:
             categories = request.GET['category'].split(',')
             products = products.filter(category__name__in=categories)
+            for product in products:
+                product.favorited = False
+                if product.is_favorited.filter(id=request.user.id).exists():
+                    product.favorited = True
+
             categories = Category.objects.filter(name__in=categories)
 
         if 'q' in request.GET:
@@ -41,6 +56,11 @@ def all_products(request):
             
             queries = Q(name__icontains=query) | Q(description__icontains=query)
             products = products.filter(queries)
+            for product in products:
+                product.favorited = False
+                if product.is_favorited.filter(id=request.user.id).exists():
+                    product.favorited = True            
+
 
     current_sorting = f'{sort}_{direction}'
 
@@ -58,8 +78,36 @@ def product_detail(request, product_id):
 
     product = get_object_or_404(Product, pk=product_id)
 
+    product.favorited = False
+    if product.is_favorited.filter(id=request.user.id).exists():
+        product.favorited = True
+
     context = {
         'product': product,
     }
 
     return render(request, 'products/product_detail.html', context)
+
+def toggle_favorite(request, product_id):
+    product = get_object_or_404(Product, pk=product_id)
+
+    if product.is_favorited.filter(id=request.user.id).exists():
+        product.is_favorited.remove(request.user)
+        messages.success(request, f'You removed {product.name} from your favorite')
+    else:
+        product.is_favorited.add(request.user)
+        messages.success(request, f'You added {product.name} to your favorite')
+
+    return redirect(request.META['HTTP_REFERER'])
+
+# class MyBookmarks(generic.ListView):
+#     """
+#     This view allows a logged in user to view their favourite products.
+#     """
+#     model = Product
+#     template_name = 'my_favourite.html'
+#     paginate_by = 6
+
+#     def get_queryset(self):
+#         """Override get_queryset to filter by user favourites"""
+#         return Product.objects.filter(is_favorited=request.user.id)

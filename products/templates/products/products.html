@@ -80,14 +80,23 @@
                                         </div>
                                     <div class="row">
                                         <div class="col">
-                                            <a href="#">
-                                                <span><p class="text-center text-color mt-1 d-block"><small>Add to Fav</small> <i id="fav-i-color" class="fas fa-heart fa-lg"></i></p></span>
+                                            {% if product.favorited %}
+                                            <a href="{% url 'toggle_favorite' product.id %}" class="text-decoration-none">
+                                                <span>
+                                                    <p class="text-center text-color mt-1 d-block"><small>My Fav</small>
+                                                        <i id="fav-i-color" class="fas fa-heart fa-lg d-block"></i>
+                                                    </p>
+                                                </span>
                                             </a>
-                                        </div>
-                                        <div class="col">
-                                            <a href="#">
-                                                <span><p class="text-center text-color mt-1 d-block"><small>Add to Bag</small> <i id="bag-i-color" class="fas fa-shopping-bag fa-lg d-block mt-1"></i></p></span>                                                
+                                            {% else %}
+                                            <a href="{% url 'toggle_favorite' product.id %}" class="text-decoration-none">
+                                                <span>
+                                                    <p class="text-center text-color mt-1 d-block"><small>My Fav</small>
+                                                        <i class="far fa-heart fa-lg d-block"></i>
+                                                    </p>
+                                                </span>
                                             </a>
+                                            {% endif %}
                                         </div>
                                     </div>
                                     </div>
@@ -128,6 +137,12 @@
 
 {% block postloadjs %}
     {{ block.super }}
+    <!-- <script>
+        function reloadPage() {
+            location.reload();
+        }
+    </script> -->
+
     <script type="text/javascript">
         $('.btt-link').click(function(e) {
             window.scrollTo(0,0)

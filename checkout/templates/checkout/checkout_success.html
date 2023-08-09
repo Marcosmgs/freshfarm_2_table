@@ -120,12 +120,21 @@
         </div>
         <div class="row">
 			<div class="col-lg-6 offset-lg-3 text-right mb-5 pb-1">
-				<a href="{% url 'products' %}?category=deals" class="btn btn-outline-green rounded-1 my-2">
-					<span class="icon mr-2">
-						<i class="fas fa-gifts"></i>
-					</span>
-					<span class="text-uppercase">Explore the most recent offers!</span>
-				</a>
+                {% if from_profile %}
+                    <a href="{% url 'profile' %}" class="btn btn-outline-green rounded-1 my-2">
+                        <span class="icon mr-2">
+                            <i class="fas fa-angle-left"></i>
+                        </span>
+                        <span class="text-uppercase">Back to Profile</span>
+                    </a>
+                {% else %}
+                    <a href="{% url 'products' %}?category=deals" class="btn btn-outline-green rounded-1 my-2">
+                        <span class="icon mr-2">
+                            <i class="fas fa-gifts"></i>
+                        </span>
+                        <span class="text-uppercase">Explore the most recent offers!</span>
+                    </a>
+                {% endif %}
 			</div>
 		</div>
     </div>

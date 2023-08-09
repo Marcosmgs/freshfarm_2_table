@@ -8,6 +8,8 @@ from products.models import Product
 from profiles.forms import UserProfileForm
 from profiles.models import UserProfile
 from bag.contexts import bag_contents
+from django.core.mail import send_mail
+from django.template.loader import render_to_string
 
 import stripe
 
@@ -99,6 +101,23 @@ def checkout(request):
 
     return render(request, template, context)
 
+def _send_confirmation_email(order):
+    """Email the user a confirmation of the order"""
+    cust_email = order.email
+    subject = render_to_string(
+        'checkout/confirmation_emails/confirmation_email_subject.txt',
+        {'order': order})
+    body = render_to_string(
+        'checkout/confirmation_emails/confirmation_email_body.txt',
+        {'order': order, 'contact_email': settings.DEFAULT_FROM_EMAIL})
+    
+    send_mail(
+        subject,
+        body,
+        settings.DEFAULT_FROM_EMAIL,
+        [cust_email]
+    )
+
 def checkout_success(request, order_number):
     """
     Manage successful payments
@@ -128,6 +147,9 @@ def checkout_success(request, order_number):
     messages.success(request, f'Order has been successfully placed! \
         Your order number is {order_number}. An email \
         confirming your order will be sent to {order.email}.')
+
+    # Send confirmation email
+    _send_confirmation_email(order)        
 
     if 'bag' in request.session:
         del request.session['bag']

@@ -3,7 +3,9 @@ from django.contrib import messages
 from django.db.models import Q
 from django.views import generic, View
 from django.db.models.functions import Lower
+
 from .models import Product, Category
+from .forms import ProductForm
 
 def all_products(request):
     """ View to display all the products and sorting search queries """
@@ -114,3 +116,13 @@ def favorite_products(request):
     }
     
     return render(request, 'products/favorite_products.html', context)
+
+def add_product(request):
+    """ Add products to the shop """
+    form = ProductForm()
+    template = 'products/add_product.html'
+    context = {
+        'form': form,
+    }
+
+    return render(request, template, context)

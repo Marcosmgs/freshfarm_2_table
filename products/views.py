@@ -103,6 +103,11 @@ def toggle_favorite(request, product_id):
     return redirect(request.META['HTTP_REFERER'])
 
 def favorite_products(request):
+    """" 
+    retrieves a list of favorite products 
+    for a specific user and prepares the data 
+    to be displayed in a template. 
+    """
     user = request.user
     favorite_products = Product.objects.filter(is_favorited=user)
     for product in favorite_products:
@@ -119,7 +124,18 @@ def favorite_products(request):
 
 def add_product(request):
     """ Add products to the shop """
-    form = ProductForm()
+
+    if request.method == 'POST':
+        form = ProductForm(request.POST, request.FILES)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Product added successfully!')
+            return redirect(reverse('add_product'))
+        else:
+            messages.error(request, 'Unable to add product. Please make sure the form is filled out correctly.')
+    else:
+        form = ProductForm()
+        
     template = 'products/add_product.html'
     context = {
         'form': form,

@@ -6,13 +6,13 @@ class OrderForm(forms.ModelForm):
     class Meta:
         model = Order
         fields = ('full_name', 'email', 'phone_number',
-                  'street_address','town_or_city', 
+                  'street_address', 'town_or_city',
                   'postcode', 'country',)
 
     def __init__(self, *args, **kwargs):
         """
-        Include empty spaces for input and assign styles, 
-        eliminate automatically generated titles, 
+        Include empty spaces for input and assign styles,
+        eliminate automatically generated titles,
         and set the first field as the initial focus.
         """
         super().__init__(*args, **kwargs)

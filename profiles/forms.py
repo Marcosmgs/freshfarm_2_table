@@ -9,8 +9,8 @@ class UserProfileForm(forms.ModelForm):
 
     def __init__(self, *args, **kwargs):
         """
-        Include empty spaces for input and assign styles, 
-        eliminate automatically generated titles, 
+        Include empty spaces for input and assign styles,
+        eliminate automatically generated titles,
         and set the first field as the initial focus.
         """
         super().__init__(*args, **kwargs)

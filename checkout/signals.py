@@ -3,12 +3,14 @@ from django.dispatch import receiver
 
 from .models import OrderLineItem
 
+
 @receiver(post_save, sender=OrderLineItem)
 def update_on_save(sender, instance, created, **kwargs):
     """
     Recalculate order total when a line item is added or modified.
     """
     instance.order.update_total()
+
 
 @receiver(post_delete, sender=OrderLineItem)
 def update_on_delete(sender, instance, **kwargs):

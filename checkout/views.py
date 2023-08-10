@@ -13,6 +13,7 @@ from django.template.loader import render_to_string
 
 import stripe
 
+
 def checkout(request):
     stripe_public_key = settings.STRIPE_PUBLIC_KEY
     stripe_secret_key = settings.STRIPE_SECRET_KEY
@@ -43,19 +44,20 @@ def checkout(request):
                     )
                     order_line_item.save()
                 except Product.DoesNotExist:
-                    messages.error(request, (
-                        "We couldn't find one of the items in your bag in our records."
-                        "Please reach out to us for help!")
-                    )
+                    messages.error(request, ("We couldn't find one \
+                    of the items in your bag in our records. \
+                    Please reach out to us for help!"))
+
                     order.delete()
                     return redirect(reverse('view_bag'))
 
             request.session['save_info'] = 'save-info' in request.POST
-            return redirect(reverse('checkout_success', args=[order.order_number]))
+            return redirect(reverse('checkout_success',
+                            args=[order.order_number]))
         else:
-            messages.error(request, 'There seems to be an issue with your form. \
-                Please review the details you provided.')               
-    else:   
+            messages.error(request, 'There seems to be an issue \
+            with your form. Please review the details you provided.')
+    else:
         bag = request.session.get('bag', {})
         if not bag:
             messages.error(request, "Your bag is currently empty.")
@@ -91,7 +93,6 @@ def checkout(request):
         messages.warning(request, 'The Stripe public key is not present. \
             Did you overlook setting it in your settings?')
 
-
     template = 'checkout/checkout.html'
     context = {
         'order_form': order_form,
@@ -100,6 +101,7 @@ def checkout(request):
     }
 
     return render(request, template, context)
+
 
 def _send_confirmation_email(order):
     """Email the user a confirmation of the order"""
@@ -110,7 +112,7 @@ def _send_confirmation_email(order):
     body = render_to_string(
         'checkout/confirmation_emails/confirmation_email_body.txt',
         {'order': order, 'contact_email': settings.DEFAULT_FROM_EMAIL})
-    
+
     send_mail(
         subject,
         body,
@@ -118,13 +120,14 @@ def _send_confirmation_email(order):
         [cust_email]
     )
 
+
 def checkout_success(request, order_number):
     """
     Manage successful payments
     """
     save_info = request.session.get('save_info')
     order = get_object_or_404(Order, order_number=order_number)
-    
+
     if request.user.is_authenticated:
         profile = UserProfile.objects.get(user=request.user)
         # Attach the user profile to the order
@@ -149,7 +152,7 @@ def checkout_success(request, order_number):
         confirming your order will be sent to {order.email}.')
 
     # Send confirmation email
-    _send_confirmation_email(order)        
+    _send_confirmation_email(order)
 
     if 'bag' in request.session:
         del request.session['bag']

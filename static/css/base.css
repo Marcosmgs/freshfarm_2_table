@@ -42,6 +42,10 @@ body {
     color: #3E5336;
 }
 
+.sign-up-color {
+    color: white;
+}
+
 #account-i-color{
     color: #F6DA73;
 }
@@ -218,6 +222,15 @@ a.category-badge > span.badge:hover {
     overflow-y: auto;
 }
 
+#mc_embed_signup {
+    background:#fff false;
+    clear:left; 
+    font:14px Helvetica,Arial,sans-serif;
+    color: white;
+    width: 300px;
+}
+
+
 /* -------------------------------- Media Queries */
 
 /* Slightly smaller nav on medium screens */
@@ -262,7 +275,7 @@ a.category-badge > span.badge:hover {
         font-size: 0.7rem;
     }
     #banner h4 {
-        font-size: 0.8rem !important;
+        font-size: 0.8rem;
     }
     
 }
@@ -291,7 +304,7 @@ a.category-badge > span.badge:hover {
 }
 
 /* Slightly smaller delivery banner on super smallscreena */
-@media (max-width: 268px) {
+@media (max-width: 325px) {
     #banner h4 {
         font-size: 0.7rem !important;
     }

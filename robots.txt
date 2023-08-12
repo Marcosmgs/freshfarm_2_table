@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: /accounts/
+Disallow: /bag/
+Sitemap: https://fresh-farm-2-table-270bbb259c1e.herokuapp.com/sitemap.xml

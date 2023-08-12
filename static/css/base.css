@@ -255,9 +255,6 @@ a.category-badge > span.badge:hover {
     #grand-total-mobile {
         font-size: 0.5rem;
     }
-    #banner h4 {
-        font-size: 0.8rem;
-    }
     .navbar {
         padding: 0rem;
     }
@@ -277,7 +274,7 @@ a.category-badge > span.badge:hover {
     }
 
     #banner h4 {
-        font-size: 0.9rem;
+        font-size: 0.8rem;
     }
 
 }

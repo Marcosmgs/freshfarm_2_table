@@ -289,3 +289,11 @@ a.category-badge > span.badge:hover {
         width: 12rem;
     }    
 }
+
+/* Slightly smaller delivery banner on super smallscreena */
+@media (max-width: 268px) {
+    #banner h4 {
+        font-size: 0.7rem !important;
+    }
+    
+}

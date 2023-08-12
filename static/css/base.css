@@ -218,19 +218,10 @@ a.category-badge > span.badge:hover {
     overflow-y: auto;
 }
 
-/* .bag-notification-wrapper {
-    height: 100px;
-    overflow-x: hidden;
-    overflow-y: auto;
-} */
-
 /* -------------------------------- Media Queries */
 
 /* Slightly smaller nav on medium screens */
 @media (max-width: 1101px) {
-    .font-nav{
-        font-size: 0.9rem;
-    }
     #nav-list {
         padding-left: 0;
         padding-right: 0;
@@ -265,7 +256,7 @@ a.category-badge > span.badge:hover {
         font-size: 0.5rem;
     }
     #banner h4 {
-        font-size: 0.9rem;
+        font-size: 0.8rem;
     }
     .navbar {
         padding: 0rem;
@@ -284,6 +275,11 @@ a.category-badge > span.badge:hover {
     body {
         height: calc(100vh - 116px);
     }
+
+    #banner h4 {
+        font-size: 0.9rem;
+    }
+
 }
 
 /* Slightly smaller nav on medium screens */

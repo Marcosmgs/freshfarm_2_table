@@ -42,3 +42,43 @@
        handleEnableDisable(itemId);
     });
 </script>
+
+<script type="text/javascript">
+    // Disable +/- buttons outside 1-99 range
+    function handleEnableDisable(inputElement) {
+        var currentValue = parseInt(inputElement.val());
+        var minusDisabled = currentValue < 2;
+        var plusDisabled = currentValue > 98;
+        
+        inputElement.closest('.input-group').find('.decrement-qty').prop('disabled', minusDisabled);
+        inputElement.closest('.input-group').find('.increment-qty').prop('disabled', plusDisabled);
+    }
+
+    // Ensure proper enabling/disabling of all inputs on page load
+    var allQtyInputs = $('.qty_input');
+    allQtyInputs.each(function() {
+        handleEnableDisable($(this));
+    });
+
+    // Check enable/disable every time the input is changed
+    $(document).on('change', '.qty_input', function() {
+        handleEnableDisable($(this));
+    });
+
+    // Increment and Decrement quantity
+    $(document).on('click', '.increment-qty', function(e) {
+        e.preventDefault();
+        var inputElement = $(this).closest('.input-group').find('.qty_input');
+        var currentValue = parseInt(inputElement.val());
+        inputElement.val(currentValue + 1);
+        handleEnableDisable(inputElement);
+    });
+
+    $(document).on('click', '.decrement-qty', function(e) {
+        e.preventDefault();
+        var inputElement = $(this).closest('.input-group').find('.qty_input');
+        var currentValue = parseInt(inputElement.val());
+        inputElement.val(currentValue - 1);
+        handleEnableDisable(inputElement);
+    });
+</script>

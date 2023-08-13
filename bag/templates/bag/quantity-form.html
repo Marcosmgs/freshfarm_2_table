@@ -10,7 +10,7 @@
                     </span>
                 </button>
             </div>
-            <input class="form-control form-control-sm qty_input text-center" type="number"
+            <input class="form-control form-control-sm qty_input text-center qty_input_{{ item.item_id }}" type="number"
                 name="quantity" value="{{ item.quantity }}" min="1" max="99"
                 data-item_id="{{ item.item_id }}"
                 id="id_qty_{{ item.item_id }}">
@@ -25,5 +25,5 @@
         </div>
     </div>
 </form>
-<a class="update-link text-info text-decoration-none" ><small>Update</small></a>
+<a class="update-link text-info text-decoration-none"><small>Update</small></a>
 <a class="remove-item text-danger float-right text-decoration-none" id="remove_{{ item.item_id }}"><small>Remove</small></a>

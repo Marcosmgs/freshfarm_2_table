@@ -13,6 +13,11 @@ In a world where convenience often trumps healthy choices, FF2T stands as a beac
 ## Table Of Contents
 * [User Experience (UX)](#user-experience-ux)
   * [User Stories](#user-stories)
+  * [Design](#design)
+  * [Colour Scheme](#-colour-scheme)
+  * [Typography](#-typography)
+  * [Imagery](#-imagery)
+  * [Wireframes](#-wireframes)
 
 
 - - -
@@ -109,3 +114,83 @@ The Logo image used within the heading site has been taken from [Freesvg](https:
 
 The product imagery uploaded by the site admin comes from a Dataset from [Kaggle](https://www.kaggle.com)
 
+#### **-WIREFRAMES**
+
+Wireframes were created using [Figma](https://www.figma.com/)
+
+<details>
+<summary>Home Page - Desktop & Mobile</summary>
+
+ ![Landing Page Frame](Docs/Readme_images/wireframes/home_page_frame.png))
+
+</details>
+
+<details>
+<summary>Product List Page</summary>
+
+ ![Product List View](Docs/Readme_images/wireframes/product_list_view_page_frame.png)
+
+</details>
+
+<details>
+<summary>Register My Account Page</summary>
+
+ ![Register Account Frame](Docs/Readme_images/wireframes/register_my_account_page_frame.png)
+
+</details>
+
+<details>
+<summary>Login Page</summary>
+
+ ![login_page_frame](Docs/Readme_images/wireframes/login_my_account_page_frame.png)
+
+</details>
+
+<details>
+<summary>Logout Page</summary>
+
+ ![logout_page_frame](Docs/Readme_images/wireframes/logout_my_account_page_frame.png)
+
+</details>
+
+<details>
+<summary>Product Details View Page</summary>
+
+ ![product details view](Docs/Readme_images/wireframes/product_details_view_page_frame.png)
+
+</details>
+
+<details>
+<summary>My Profile Page</summary>
+
+ ![my profile page frame](Docs/Readme_images/wireframes/my_profile_my_account_page_frame.png)
+
+</details>
+
+<details>
+<summary>My Favourite Page</summary>
+
+ ![my favourite product](Docs/Readme_images/wireframes/my_favourite_my_account_page_frame.png)
+
+</details>
+
+<details>
+<summary>My Shopping Bag Page</summary>
+
+ ![my shopping bag](Docs/Readme_images/wireframes/my_shopping_bag_page_frame.png)
+
+</details>
+
+<details>
+<summary>Checkout Secure Page</summary>
+
+ ![checkout page](Docs/Readme_images/wireframes/checkout_secure_page_frame.png)
+
+</details>
+
+<details>
+<summary>Checkout Success Page</summary>
+
+ ![checkout success](Docs/Readme_images/wireframes/checkout_success_page_frame.png)
+
+</details>

@@ -67,4 +67,45 @@ These user stories served as a starting point and can be expanded upon features 
 - As an Admin, I can Update or Edit products in the platform, So that I can Manage the product catalog effectively.
 - As an Admin, I can Remove products from the platform, So that I can Manage the product catalog effectively.
 
+### Design
+Fresh Farm 2 Table is rooted in simplicity and friendly UI. Our interface has been meticulously crafted to facilitate seamless navigation, allowing users to effortlessly explore the application and concentrate on what truly matters. With a minimalist and intuitive layout, we've prioritized clarity and ease of use, ensuring that your journey through Fresh Farm 2 Table is both engaging and intuitive. 
+
+Inspired by the exceptional design principles exemplified in projects like the [Boutique Ado](https://github.com/ckz8780/boutique_ado_v1) by Code Institute, we've crafted a platform that harmonizes aesthetics with functionality.
+
+#### **-COLOUR SCHEME**
+
+Color theme from Adobe Color
+
+The color scheme of Fresh Farm 2 Table, inspired by the vibrant palette of bananas, has been meticulously choosen to infuse the platform with a sense of freshness, comfort, and organic vibrancy.
+
+![Color Scheme Image](Docs/Readme_images/colour_palet.png)
+
+There are strong contrast between background colors and text throughout our web application, ensuring maximum readability and usability for all users.
+ 
+#### **-TYPOGRAPHY**
+ 
+Google Fonts was used to import the chosen fonts below for use in the application.
+
+CSS rules to specify families
+
+font-family: 'Lato', sans-serif; (main font)
+
+![Font Lato](Docs/Readme_images/font_lato.png)
+
+font-family: 'Open Sans', sans-serif; (secondary font)
+
+![Font Open Sans](Docs/Readme_images/font_open_san.png)
+
+        
+#### **-IMAGERY**
+
+The homepage background image used within the site has been chosen from [pexel](https://www.pexels.com) taken by the photographer bellow:
+
+Photo by: 
+
+- [Mikhail Nilov](https://www.pexels.com/@mikhail-nilov/)
+
+The Logo image used within the heading site has been taken from [Freesvg](https://freesvg.org/shopping-basket-vector-illustration)
+
+The product imagery uploaded by the site admin comes from a Dataset from [Kaggle](https://www.kaggle.com)
 

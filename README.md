@@ -18,7 +18,7 @@ In a world where convenience often trumps healthy choices, FF2T stands as a beac
   * [Typography](#-typography)
   * [Imagery](#-imagery)
   * [Wireframes](#-wireframes)
-
+* [Agile Methodology](#agile-methodology)
 
 - - -
 
@@ -194,3 +194,13 @@ Wireframes were created using [Figma](https://www.figma.com/)
  ![checkout success](Docs/Readme_images/wireframes/checkout_success_page_frame.png)
 
 </details>
+
+
+## Agile Methodology
+
+Github project was used to manage the development process of this project using an agile approach. 
+Find the link to the Github project [here](https://github.com/users/Marcosmgs/projects/5/views/1) 
+
+The  FF2T User Stories is documented within the Github project. A Github issue was created for each user stories and allocated to the Project. 
+The user stories were moved accordingly the application was been built.  
+

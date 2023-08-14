@@ -19,6 +19,7 @@ In a world where convenience often trumps healthy choices, FF2T stands as a beac
   * [Imagery](#-imagery)
   * [Wireframes](#-wireframes)
 * [Agile Methodology](#agile-methodology)
+* [Data Model](#data-model)
 
 - - -
 
@@ -203,4 +204,28 @@ Find the link to the Github project [here](https://github.com/users/Marcosmgs/pr
 
 The  FF2T User Stories is documented within the Github project. A Github issue was created for each user stories and allocated to the Project. 
 The user stories were moved accordingly the application was been built.  
+
+
+## Data Model
+
+In the Fresh Farm 2 Table project, the data model utilizes a set of function based views to efficiently manage various aspects of the application functionality. These views serve as the core logic for handling interactions with the data model. Each function view correspond to a specific user action, ensuring a organized structure.
+
+[Django AllAuth](https://django-allauth.readthedocs.io/en/latest/) was used for user authentication. 
+This powerful authentication system provides a seamless and secure user login and registration process, enhancing the overall user experience.
+
+Category model serves as a fundamental building block, categorizing products and enabling easy navigation. With attributes name and friendly_name, this model ensures a structured representation of product categories, both internally and in the UI.
+
+Product model is at the heart of the application, representing individual items available for purchase.
+The is_favorited field, established as a Many-to-Many relationship with the User model, facilitates the tracking of users' favorite products.
+
+UserProfile model extend the built-in User model provided by Django. This model provide an UX convenience by pre filling delivery information and connecting orders to user profiles.
+
+Order model is central to the e-commerce. This model incorporates a unique order identifier generated using UUID, ensuring order differentiation. 
+Complementing the Order model, the OrderLineItem model represents individual items within an order. This model calculates the total cost for each line item and adjusts the overall order total accordingly, ensuring accurate billing.
+
+The ER diagram below shows the schemes for each of the models and how they are related.
+
+![ER Diagram Image](Docs/Readme_images/er_model_diagram.png)
+
+Entity relationship diagram was created using [Figma](https://www.figma.com/).
 

@@ -270,3 +270,25 @@ Entity relationship diagram was created using [Figma](https://www.figma.com/).
 * On smaller displays, such as mobile devices, the header transforms navigation menu into a hamburger menu, ensuring easy navigation and saving valuable screen space.
 * Home Page link will be displayed in smaller screens to avail a back to landing page option in smaller screens.
 ![Main Nav Menu](Docs/Readme_images/features/nav_menu_small.png)
+
+
+#### **Home Page**
+
+#### **- Landing Page**
+* The hero image immediately captures users attention and conveys the core theme of fresh produce directly from the farm.
+* "Quality & Freshness are here" This statement communicates the central value proposition of high-quality, fresh produce to customers.
+* The "Shop Now" button serves as a clear and direct call to action, inviting users to explore the product offerings.
+![Welcome Section](Docs/Readme_images/features/landing_page.png)
+
+#### **- Newsletter**
+* The addition of a newsletter subscription form expands interaction with users beyond their immediate visit.
+* Subscribing users will receive exclusive offers and discount codes through your monthly newsletter as a sense of exclusivity and value.
+![Welcome Section](Docs/Readme_images/features/subscription.png)
+
+
+#### **Footer**
+
+* The footer section of FF2T is displayed across all web pages, providing important information and encouraging user engagement.
+* Social media icons link to FF2T official social media pages, providing users with additional avenues to stay connected, receive updates, and access more content.
+* The copyright information clearly communicates the ownership and rights associated with your application's content.
+![Footer](Docs/Readme_images/features/footer.png)

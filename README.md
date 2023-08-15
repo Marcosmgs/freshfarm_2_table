@@ -22,8 +22,9 @@ In a world where convenience often trumps healthy choices, FF2T stands as a beac
 * [Data Model](#data-model)
 * [Features](#features)
   * [Header](#header)
-  * [Footer](#footer)
   * [Home Page](#home-page)
+  * [Footer](#footer)
+  * [User Account Pages](#user-account-pages)
 
 - - -
 
@@ -283,6 +284,7 @@ Entity relationship diagram was created using [Figma](https://www.figma.com/).
 #### **- Newsletter**
 * The addition of a newsletter subscription form expands interaction with users beyond their immediate visit.
 * Subscribing users will receive exclusive offers and discount codes through your monthly newsletter as a sense of exclusivity and value.
+* Newsletter subscription enhances engagement beyond the landing page visit, ensuring users continue to interact with FF2T.
 ![Welcome Section](Docs/Readme_images/features/subscription.png)
 
 
@@ -292,3 +294,24 @@ Entity relationship diagram was created using [Figma](https://www.figma.com/).
 * Social media icons link to FF2T official social media pages, providing users with additional avenues to stay connected, receive updates, and access more content.
 * The copyright information clearly communicates the ownership and rights associated with your application's content.
 ![Footer](Docs/Readme_images/features/footer.png)
+
+#### **User Account Pages**
+
+<details>
+<summary>Sign Up</summary>
+ 
+ ![Sign Up image](Docs/Readme_images/features/register_page.png)
+ 
+</details>
+<details>
+<summary>Log In </summary>
+ 
+ ![Log In image](Docs/Readme_images/features/sign_in_page.png)
+ 
+</details>
+<details>
+<summary>Log Out</summary>
+ 
+ ![Log Out image](Docs/Readme_images/features/sign_out_page.png)
+ 
+</details>

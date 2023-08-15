@@ -20,6 +20,10 @@ In a world where convenience often trumps healthy choices, FF2T stands as a beac
   * [Wireframes](#-wireframes)
 * [Agile Methodology](#agile-methodology)
 * [Data Model](#data-model)
+* [Features](#features)
+  * [Header](#header)
+  * [Footer](#footer)
+  * [Home Page](#home-page)
 
 - - -
 
@@ -229,3 +233,27 @@ The ER diagram below shows the schemes for each of the models and how they are r
 
 Entity relationship diagram was created using [Figma](https://www.figma.com/).
 
+
+## Features
+
+#### **Header**
+
+**- Deals Banner**
+* The banner fixed-top positioning ensures that the message is displayed at the very top of every page.
+* By displaying "Free delivery" offer throughout the application, users are consistently reminded of the benefit they can avail.
+* Positively influence user behavior, prompting them to add more items to their bag to qualify for the promotion.
+![Nav Banner](Docs/Readme_images/features/offer_banner.png)
+
+**- Header Bar**
+* The header bar in FF2T provides convenient access to different sections of the web application
+* The header bar is responsive and adapts to different screen sizes.
+![Non Reg User](Docs/Readme_images/features/non_reg_user_menu.png)
+* On smaller displays, such as mobile devices, the header transforms navigation menu into a hamburger menu and turn the search bar into a collapsible navigation menu, ensuring easy navigation and saving valuable screen space.
+![Non Reg User small](Docs/Readme_images/features/small_menu_non_login_user.png)
+* When user is logged in the header bar features my favourite functionallity for registered users.
+* For superusers, the header includes an additional link for product management.
+![Reg user small](Docs/Readme_images/features/small_menu_logged_user.png)
+* The header begins with the branding element, featuring the application's logo and name
+* Users can access their account related actions such as logging in, registering, viewing their profile, and managing their favorite products.
+* header provides users with a summary of their shopping bag, including the total amount spend.
+![Logged User Menu](Docs/Readme_images/features/logged_user_menu.png)

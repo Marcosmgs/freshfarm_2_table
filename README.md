@@ -257,3 +257,16 @@ Entity relationship diagram was created using [Figma](https://www.figma.com/).
 * Users can access their account related actions such as logging in, registering, viewing their profile, and managing their favorite products.
 * header provides users with a summary of their shopping bag, including the total amount spend.
 ![Logged User Menu](Docs/Readme_images/features/logged_user_menu.png)
+
+**- Search Bar**
+* The header bar in FF2T provides convenient access to different sections of the web application.
+* The search query is related with name and product description to ensure quality results.
+![Non Reg User](Docs/Readme_images/features/search_bar.png)
+
+**- Main Navigation Bar**
+* Provides users with structured and easy access to all products sections and categories, ensuring efficient navigation and rifined exploration of content.
+* By categorizing content and providing dropdown menus, users can easily navigate to the sections of the application that interest them, leading to more focused exploration.
+![Main Nav Menu](Docs/Readme_images/features/navigation_menu.png)
+* On smaller displays, such as mobile devices, the header transforms navigation menu into a hamburger menu, ensuring easy navigation and saving valuable screen space.
+* Home Page link will be displayed in smaller screens to avail a back to landing page option in smaller screens.
+![Main Nav Menu](Docs/Readme_images/features/nav_menu_small.png)

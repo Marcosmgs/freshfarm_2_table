@@ -9,9 +9,9 @@
   * [Shopping Bag Page](#shopping-bag-page)
   * [Checkout Page](#checkout-page)
   * [Checkout Success Page](#checkout-success-page)
-  * [Add Recipe Page](#add-recipe-pagewhen-the-user-is-authenticated)
-  * [Edit Recipe](#edit-recipewhen-the-user-is-authenticated)
-  * [Delete Recipe](#delete-recipewhen-the-user-is-authenticated)
+  * [Add Product Page](#add-product-page)
+  * [Edit Product Page](#edit-product-page)
+  * [Delete Product](#delete-product)
   * [Django All Auth Pages](#django-all-auth-pages)
   * [Admin panel](#admin-panel)
 * [Browser Testing](#browser-testing)
@@ -180,3 +180,31 @@
 | Success Page Display  | Access the checkout success page  | The page should display the order details, thanking the user for their order. It should show the order number, order date, order items, delivering address, billing information, order total, delivery cost, and grand total.  | Pass  |
 | Back to Profile Button  | Click on the "Back to Profile" button  | If the order was accessed from the user profile, clicking the button should redirect the user to their profile page.  | Pass  |
 | Explore Offers Button  | Click on the "Explore the most recent   | If the order was not placed from the user's profile, clicking the button should redirect the user to the products page with a specific category filter.  | Pass  |
+
+
+### Add Product Page
+
+| Test  | Action | Expected Results  | Pass/Fail |
+| ------------- | ------------- | ------------- | ------------- |
+| Accessing the Page  | Log in as a superuser and access the "Add Product" page  | The page should load without errors, displaying the form to add a new product.  | Pass  |
+| Form Display  | Verify if the product form is displayed correctly  | The form should include fields for product name, description, category, price, stock, image, and unity.  | Pass  |
+| Form Fields  | Verify if all required form fields are present  | All mandatory fields (marked with an asterisk) should be present in the form.  | Pass  |
+| Adding a New Product  | Fill out the form with valid information and submit it  | After submitting the form, the user should be redirected to the product detail page of the newly added product, and a success message should be displayed.  | Pass  |
+| Form Validation  | Attempt to submit the form with missing or incorrect information  | If any required field is missing or incorrect, an error message should be displayed, and the form should not be submitted.  | Pass  |
+| Cancel Button  | Click on the "Cancel" button  | Clicking the "Cancel" button should redirect the user back to the product list page.  | Pass  |
+| Adding a Product as a Non-Superuser  | Log in as a non-superuser and access the "Add Product" page  | A message should be displayed informing the user that this action is limited to store owners only. The user should be redirected to the home page.  | Pass  |
+
+
+### Edit Product Page
+
+| Test  | Action | Expected Results  | Pass/Fail |
+| ------------- | ------------- | ------------- | ------------- |
+| Success  | Access  | The  | Pass  |
+
+
+
+### Delete Product
+
+| Test  | Action | Expected Results  | Pass/Fail |
+| ------------- | ------------- | ------------- | ------------- |
+| Success  | Access  | The  | Pass  |

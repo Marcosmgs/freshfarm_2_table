@@ -29,6 +29,8 @@ In a world where convenience often trumps healthy choices, FF2T stands as a beac
   * [Products List](#products-list)
   * [Products Details](#products-details)
   * [My Favourite Products](#my-favourite-products)
+  * [My Shopping Bag](#my_shopping_bag)
+  * [Action Messages](#messages-&-small-bag-display)
 
 - - -
 
@@ -386,4 +388,22 @@ Entity relationship diagram was created using [Figma](https://www.figma.com/).
 #### **- Toggle My Favoutiter**
 ![Add Fav Product](Docs/Readme_images/features/toggle_my_favoutite.png)
 * A heart icon indicates whether the product is in the users favorites or not. If the product is a favorite, a filled heart is shown otherwise, an outline heart is displayed.
+
+
+#### **My Shopping Bag**
+![Shopping Bag](Docs/Readme_images/features/shopping_bag_page.png)
+* The shopping bag page displays a list of items that the user has added to their shopping bag.
+* It provides information about each product, including its image, name, price, quantity, subtotal, and the total price of the bag.
+* The page allows users to review the items and adjust it in their shopping bag before proceeding to checkout.
+* If the user bag is empty, a message is displayed indicating that the bag is empty.
+* Additionally, a button is provided for users to continue shopping or proceed to checkout.
+
+
+#### **Messages & Small Bag Display**
+![Messages & Bag](Docs/Readme_images/features/action_messages.png)
+* This functionallity provide toast messages for various types of messages, such as errors, warnings, and successes.
+* This messages also provide a summary view of the products in the bag.
+* The data-autohide="false" attribute is added to each toast, preventing them from automatically hiding. This allows users to dismiss the toast manually.
+* Different colors and icons are used to visually distinguish between error, warning, success, and information messages.
+
 

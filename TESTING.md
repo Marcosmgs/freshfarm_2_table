@@ -306,16 +306,15 @@ All html pages have been run through the [W3C HTML Validator](https://validator
 
 ![HTML CHECKER](Docs/Readme_images/testing/html_checker.png)
 
-All the pages were runned the HTML checker
+All pages within the project have undergone thorough validation using an HTML checker to ensure their compliance with standards. 
 
-All the pages checked returned with none warnings
+The validation process yielded positive results, with no warnings being raised across all pages. 
 
-All the pages checked returned an error due an element been used in a separate file for responsiveness purposes.
+However, during this validation, an error was identified related to an element used in a separate file dedicated to ensuring optimal responsiveness of the pages. 
 
-I have tried to clear this erro using the context given by W3C but had no success without break the responsiveness of the page. 
+Despite efforts to resolve this issue using the guidance provided by the W3C, attempts to rectify the error were met with challenges, as it was breaking the responsivennes of the page.
 
-Therefore I am leaving this to maintain the web resposive as it wont affect the page navigation.
-
+As a result, it was determined that maintaining the web responsiveness, which plays a pivotal role in delivering a smooth UX, takes precedence over addressing the specific error. This approach ensures that the overall page navigation and user interaction remain unaffected while upholding the high standards of web responsiveness that have been established.
 
 ## Jigsaw CSS VALIDATION
 No errors or warnings are returned when passing the styles.css through the [Jigsaw CSS Validator](https://jigsaw.w3.org/css-validator/).
@@ -410,3 +409,16 @@ All the main Python files were run through the [CI Python Linter Validator](htt
 **- checkout signals.py**
 * Erros = None.
 ![test forms.py](Docs/Readme_images/testing/checkout_signals.png)
+
+
+## LIGHTHOUSE REPORTS
+FF2T app home page have been tested for Performance, Accessibility, Best Practices and SEO using [Lighthouse Chrome Developer Tool](https://developer.chrome.com/docs/lighthouse/overview/).
+The lighthouse scores look very good overall, with some things that could be improved. A future implementation would be to convert all images to the webp format.
+
+**- Home Page**
+* Performance = 64
+* Accessibility = 89
+* Best Practices = 100
+* SEO = 100
+![lighthouse test](Docs/Readme_images/testing/lighthouse_result.png)
+

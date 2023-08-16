@@ -65,12 +65,26 @@
 
 ### My Profile Page
 
+| Test  | Action | Expected Results  | Pass/Fail |
+| ------------- | ------------- | ------------- | ------------- |
+| Default Delivery Information Form  | Verify if the default delivery information form is displayed  | The form should be displayed with fields for phone number, street address, postcode, city, and country  | Pass  |
+| Default Delivery Information Form - Empty Fields  | Submit the form without entering any information  | An error message should appear for required fields  | Pass  |
+| Default Delivery Information Form - Invalid Phone Number  | Enter an invalid phone number format and submit the form  | An error message should appear indicating an invalid phone number format  | Pass  |
+| Default Delivery Information Form - Valid Submission  | Enter valid information in all required fields and submit the form  | The form should be submitted successfully and a success message may appear  | Pass  |
+| Default Delivery Information Form - Country Field  | Check the country field color before and after selecting a country  | The country field color should be gray before selection and black after selection  | Pass  |
+| Order History Table  | Verify if the order history table is displayed  | The table should display order numbers, dates, items, and order totals  | Pass  |
+| Order History Table - Order Number Link  | Click on an order number link  | The page should navigate to the order history page for that specific order  | Pass  |
+| Order History Table - Order Items  | Verify if the ordered items are displayed correctly  | The items for each order should be listed with their quantities and units  | Pass  |
+| Order History Table - Order Total  | Verify if the order total is displayed correctly  | The total cost for each order should be displayed  | Pass  |
+| JavaScript Interaction  | Test the JavaScript interaction of the country field  | Change the country selection and verify if the color changes accordingly  | Pass  |
 
 
 
 
 
 
-
+| Test  | Action | Expected Results  | Pass/Fail |
+| ------------- | ------------- | ------------- | ------------- |
+| Message  | Check  | The  | Pass  |
 
 

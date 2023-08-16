@@ -584,3 +584,27 @@ This website has been deployed to [Heroku](https://dashboard.heroku.com/apps) fo
 26. In Heroku, delete the Config Var DISABLE_COLLECTSTATIC
 27. Go to the Deploy Tab and, scrolling down, either Enable Automatic Deploys or Manually Deploy by selecting the chosen branch and clicking on Deploy Branch
 28. VIEW LIVE SITE The site is up and running and can be viewed by clicking on the Open app button on the top right side of the project's window on Heroku.
+
+
+## Credits
+
+Code
+* Code Institute for the Walkthrough Projects mainly the Boutique Ado which inspired me to create this project
+* Tutorial on Hello [Django project](https://github.com/Code-Institute-Solutions/Django3blog) from Code Institute.
+* Code Institute for the CI Python Linter used throughout the project at every stage of the building.
+* [StackOverflow ](https://stackoverflow.com/)
+
+Content
+* Products images were taken from a Dataset in [Kaggle](https://www.kaggle.com)
+
+Media
+* Code Institute for the README.md file tutorial.
+* Code Institute for the project template CI Template
+* Imagery on this site were taken from [Pexels](https://www.pexels.com/)
+
+
+## Acknowledgments
+
+* My Partner was an amazing help thourghout this project, supporting me in stressfull moments during the development of this project.
+* My Mentor Jubril Akolade for his patience and helpful feedback.
+* Slack Community my fellow students, as well as mentors and CI staff.

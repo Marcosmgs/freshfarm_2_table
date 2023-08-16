@@ -269,5 +269,27 @@
 
 * Django Allauth works successfully and the admins can change users permissions.
 
+
 ## Browser Testing
 * The Website was tested on Google Chrome, Firefox, Safari browsers with no issues noted.
+
+
+## Bugs
+
+### Fixed Bugs
+
+* Herokuapp URL page not displaying on am I responsive frames. Error showing in the mock screens was **recipes-for-me-herokuapp.com refused to connect** this [link](https://code-institute-room.slack.com/archives/C026PTF46F5/p1669748686922019?thread_ts=1669744943.768489&cid=C026PTF46F5) was very helpful to fix the issue.
+
+* Allauth unable to fund templates derectory 
+/home/gitpod/.pyenv/versions/3.11.1/bin/python: can't open file '/workspace/boutique_ado/help': [Errno 2] No such file or directory
+
+To find the location of the allauth templates in Django, you can follow these steps:
+
+- Make sure you are in the root directory of your Django project.
+- Open a terminal or command prompt in that directory.
+- Run the following command to find the location of the allauth templates:
+
+python manage.py shell -i python -c "import allauth; print(allauth.__path__)"
+
+### Unfixed Bugs
+No Unfixed Bugs left behind ;)

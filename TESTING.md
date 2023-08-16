@@ -7,7 +7,7 @@
   * [My Favourite Products Page](#my-favourite-products-page)
   * [Products Details Page](#products-details-page)
   * [Shopping Bag Page](#shopping-bag-page)
-  * [Checkout Page](#shopping-bag-page)
+  * [Checkout Page](#checkout-page)
   * [Checkout Success Page](#checkout-success-page)
   * [Add Recipe Page](#add-recipe-pagewhen-the-user-is-authenticated)
   * [Edit Recipe](#edit-recipewhen-the-user-is-authenticated)
@@ -111,7 +111,7 @@
 | Responsive Design  | Test the page's responsiveness on different devices (desktop, tablet, mobile)  | The page elements should adjust and be displayed correctly on various screen sizes  | Pass  |
 
 
-### Products Details
+### Products Details Page
 
 | Test  | Action | Expected Results  | Pass/Fail |
 | ------------- | ------------- | ------------- | ------------- |
@@ -134,7 +134,29 @@
 | Responsive Design  | Test the page's responsiveness on different devices (desktop, tablet, mobile)  | The page elements should adjust and be displayed correctly on various screen sizes  | Pass  |
 
 
+### Shopping Bag Page
 
 | Test  | Action | Expected Results  | Pass/Fail |
 | ------------- | ------------- | ------------- | ------------- |
-| Message  | Check  | The  | Pass  |
+| Shopping Bag Display  | Access the shopping bag page  | The page should display a summary of the products in the bag, including product images, names, prices, quantities, and subtotals. The total price and "Keep Shopping" and "Secure Checkout" buttons should also be displayed.  | Pass  |
+| Bag Items Display  | Verify if bag items are displayed correctly  | Each bag item should be displayed with its image, name, SKU, price, unity, quantity input, update button, and remove button.  | Pass  |
+| Product Image  | Verify if the product image is displayed correctly  | The product image should be displayed for each bag item. If no image is available, a default placeholder image should be displayed  | Pass  |
+| Product Name  | Verify if the product name is displayed correctly  | The name of each product should be displayed as specified in the data  | Pass  |
+| SKU Display  | Verify if the SKU is displayed correctly  | The SKU of each product should be displayed as specified in the data.  | Pass  |
+| Product Price  | Verify if the product price is displayed correctly  | The price of each product should be displayed as specified in the data  | Pass  |
+| Product Unity  | Verify if the product unity is displayed correctly  | The unity of each product should be displayed as specified in the data  | Pass  |
+| Quantity Input  | Verify if the quantity input is displayed correctly  | The input should display the quantity of each product and allow the user to adjust it.  | Pass  |
+| Increment Quantity  | Click on the "Increment" button for quantity input  | The value in the quantity input should increase by 1, and the "+" button should be disabled if the value reaches 99.  | Pass  |
+| Decrement Quantity  | Click on the "Decrement" button for quantity input  | The value in the quantity input should decrease by 1, and the "-" button should be disabled if the value reaches 1.  | Pass  |
+| Update Quantity  | Click on the "Update" link for a bag item  | The quantity of the bag item should be updated based on the value in the quantity input. The subtotal and total should be recalculated.  | Pass  |
+| Remove Item  | Click on the "Remove" link for a bag item  | The bag item should be removed from the bag, and the subtotal and total should be recalculated.  | Pass  |
+| Bag Total  | Verify if the bag total is displayed correctly  | The total price of all bag items should be displayed correctly.  | Pass  |
+| Keep Shopping Button  | Click on the "Keep Shopping" button  | The button should redirect the user to the products page.  | Pass  |
+| Secure Checkout Button  | Click on the "Secure Checkout" button  | The button should redirect the user to the checkout page.  | Pass  |
+| Responsive Design  | Test the page's responsiveness on different devices (desktop, tablet, mobile)  | The page elements should adjust and be displayed correctly on various screen sizes.  | Pass  |
+
+### Checkout Page
+
+| Test  | Action | Expected Results  | Pass/Fail |
+| ------------- | ------------- | ------------- | ------------- |
+| Display  | Check  | The  | Pass  |

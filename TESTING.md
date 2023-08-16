@@ -49,6 +49,22 @@
 | My Favourite link (authenticated user)  | Click on the "My Favourite" link in the navigation bar  | The page should navigate to the user's favorite products page  | Pass  |
 | Grand Total (Mobile) link  | Click on the cart icon with the grand total in mobile view  | The page should navigate to the shopping cart page  | Pass  |
 
+### Index Page
+
+| Test  | Action | Expected Results  | Pass/Fail |
+| ------------- | ------------- | ------------- | ------------- |
+| Message  | Check if the main message "Quality & Freshness are here" is displayed  | The main message should be prominently displayed  | Pass  |
+| Shop Now Button  | Click on the "Shop Now" button  | The page should navigate to the products page  | Pass  |
+| Newsletter Subscription Form  | Enter a valid email address in the email input field and click the "Subscribe" button  | A success message should appear, indicating successful subscription  | Pass  |
+| Newsletter Subscription Form - Invalid Email  |  Enter an invalid email address in the email input field and click the "Subscribe" button  | An error message should appear, indicating invalid email format  | Pass  |
+| Newsletter Subscription Form - Empty Email  | Submit the form without entering an email address  | An error message should appear, indicating that the email address is required  | Pass  |
+| Newsletter Subscription Form - Empty Form  | Submit the form without entering any information  | An error message should appear, indicating that the email address is required  | Pass  |
+| Newsletter Subscription Form - Spam Protection  | Ensure that the spam protection input field is left blank  | The form should not be submitted successfully  | Pass  |
+| Newsletter Subscription Form - Intuit Mailchimp Badge  | Check if the Intuit Mailchimp badge is displayed and clickable  | The badge should lead to the Intuit Mailchimp website  | Pass  |
+
+
+### My Profile Page
+
 
 
 

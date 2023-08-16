@@ -33,6 +33,7 @@ In a world where convenience often trumps healthy choices, FF2T stands as a beac
   * [Toast Messages](#messages-and-small-bag-display)
   * [Checkout Page](#checkout-page)
   * [Management Products](#management-products)
+* [Future Features](#future-features)
 
 - - -
 
@@ -439,3 +440,11 @@ Entity relationship diagram was created using [Figma](https://www.figma.com/).
 * Enables superusers to edit existing products.
 * Like the add product page, it utilizes a form to collect and display product information.
 * The form fields are pre-populated with the existing product's details, which can be modified by the user. 
+
+
+## Future Features
+
+The following user stories were removed from the project as time was very short by the end of the project. The intentions are to implement it in the future.
+
+* As a Site User I can give feedback messages so that My message can be displayed in the landing page.
+* As a Site Admin I can approve or disapprove messages feedback so that I can moderate the content

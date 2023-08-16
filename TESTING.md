@@ -23,7 +23,7 @@
   * [Jigsaw CSS VALIDATION](#jigsaw-css-validation)
   * [JSHint JavaScript VALIDATION](#jshint-javascript-validation)
   * [CI Python Linter Python VALIDATION](#ci-python-linter-python-validation)
-  * [LIGHTHOUSE REPORTS](#lighthouse-reports)
+  * [Lighthouse Reports](#lighthouse-reports)
 
 ---
 
@@ -303,6 +303,7 @@ All html pages have been run through the [W3C HTML Validator](https://validator
 **-HTML Checker**
 * Erros = 1. Element li not allowed as child of element nav in this context. (Suppressing further errors from this subtree.)
 * Warnings = None.
+
 ![HTML CHECKER](Docs/Readme_images/testing/html_checker.png)
 
 All the pages were runned the HTML checker
@@ -319,11 +320,93 @@ Therefore I am leaving this to maintain the web resposive as it wont affect the 
 ## Jigsaw CSS VALIDATION
 No errors or warnings are returned when passing the styles.css through the [Jigsaw CSS Validator](https://jigsaw.w3.org/css-validator/).
 
-* ![css testing image](Docs/Readme_images/testing/css_checker.png)
+![css testing image](Docs/Readme_images/testing/css_checker.png)
 
 ## JSHint JavaScript VALIDATION
 All the Scripts used in FF2T have been run through the [JSHint Javascript Validator](https://jshint.com/) and they return no errors.
 
-* ![jshint java testing](Docs/Readme_images/testing/js_testing.png)
+![jshint java testing](Docs/Readme_images/testing/js_testing.png)
 
 
+## CI Python Linter Python VALIDATION 
+All the main Python files were run through the [CI Python Linter Validator](https://pep8ci.herokuapp.com/) with no errors returned.
+
+**- home views.py**
+* Erros = None.
+![test forms.py](Docs/Readme_images/testing/home_view.png)
+
+**- home urls.py**
+* Erros = None.
+![test forms.py](Docs/Readme_images/testing/home_urls.png)
+
+
+**- profile views.py**
+* Erros = None.
+![test forms.py](Docs/Readme_images/testing/profile_view.png)
+
+**- profile forms.py**
+* Erros = None.
+![test forms.py](Docs/Readme_images/testing/profile_form.png)
+
+**- profile models.py**
+* Erros = None.
+![test models.py](Docs/Readme_images/testing/profile_model.png)
+
+**- profile urls.py**
+* Erros = None.
+![test urls.py](Docs/Readme_images/testing/profile_urls.png)
+
+
+**- bag context.py**
+* Erros = None.
+![test forms.py](Docs/Readme_images/testing/bag_context.png)
+
+**- bag urls.py**
+* Erros = None.
+![test urls.py](Docs/Readme_images/testing/bag_urls.png)
+
+**- bag views.py**
+* Erros = None.
+![test views.py](Docs/Readme_images/testing/bag_view.png)
+
+
+**- product forms.py**
+* Erros = None.
+![test forms.py](Docs/Readme_images/testing/products_form.png)
+
+**- product urls.py**
+* Erros = None.
+![test urls.py](Docs/Readme_images/testing/products_urls.png)
+
+**- product views.py**
+* Erros = None.
+![test views.py](Docs/Readme_images/testing/product_view.png)
+
+**- products admin.py**
+* Erros = None.
+![test forms.py](Docs/Readme_images/testing/products_admin.png)
+
+
+**- checkout admin.py**
+* Erros = None.
+![test forms.py](Docs/Readme_images/testing/checkout_admin.png)
+
+**- checkout forms.py**
+* Erros = None.
+![test forms.py](Docs/Readme_images/testing/checkout_forms.png)
+
+**- chekcout models.py**
+* Erros = None.
+![test models.py](Docs/Readme_images/testing/checkout_model.png)
+
+**- chekcout urls.py**
+* Erros = None.
+![test urls.py](Docs/Readme_images/testing/checkout_urls.png)
+
+**- checkout views.py**
+* Erros = None.
+![test views.py](Docs/Readme_images/testing/checkout_views.png)
+
+**- checkout signals.py**
+* Erros = None.
+![test forms.py](Docs/Readme_images/testing/checkout_signals.png)

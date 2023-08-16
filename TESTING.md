@@ -141,10 +141,6 @@
 | Shopping Bag Display  | Access the shopping bag page  | The page should display a summary of the products in the bag, including product images, names, prices, quantities, and subtotals. The total price and "Keep Shopping" and "Secure Checkout" buttons should also be displayed.  | Pass  |
 | Bag Items Display  | Verify if bag items are displayed correctly  | Each bag item should be displayed with its image, name, SKU, price, unity, quantity input, update button, and remove button.  | Pass  |
 | Product Image  | Verify if the product image is displayed correctly  | The product image should be displayed for each bag item. If no image is available, a default placeholder image should be displayed  | Pass  |
-| Product Name  | Verify if the product name is displayed correctly  | The name of each product should be displayed as specified in the data  | Pass  |
-| SKU Display  | Verify if the SKU is displayed correctly  | The SKU of each product should be displayed as specified in the data.  | Pass  |
-| Product Price  | Verify if the product price is displayed correctly  | The price of each product should be displayed as specified in the data  | Pass  |
-| Product Unity  | Verify if the product unity is displayed correctly  | The unity of each product should be displayed as specified in the data  | Pass  |
 | Quantity Input  | Verify if the quantity input is displayed correctly  | The input should display the quantity of each product and allow the user to adjust it.  | Pass  |
 | Increment Quantity  | Click on the "Increment" button for quantity input  | The value in the quantity input should increase by 1, and the "+" button should be disabled if the value reaches 99.  | Pass  |
 | Decrement Quantity  | Click on the "Decrement" button for quantity input  | The value in the quantity input should decrease by 1, and the "-" button should be disabled if the value reaches 1.  | Pass  |
@@ -156,6 +152,28 @@
 | Responsive Design  | Test the page's responsiveness on different devices (desktop, tablet, mobile)  | The page elements should adjust and be displayed correctly on various screen sizes.  | Pass  |
 
 ### Checkout Page
+
+| Test  | Action | Expected Results  | Pass/Fail |
+| ------------- | ------------- | ------------- | ------------- |
+| Checkout Page Display  | Access the checkout page  | The page should display a form for user details, an order summary with product images, names, quantities, and subtotals, and a payment section with Stripe card input  | Pass  |
+| Order Summary  | Verify if the order summary is displayed correctly  | The order summary should display each bag item with its image, name, quantity, and subtotal. The total, delivery cost, and grand total should also be displayed correctly.  | Pass  |
+| Product Image  | Verify if the product image is displayed correctly  | The product image should be displayed for each item. If no image is available, a default placeholder image should be displayed  | Pass  |
+| Subtotal Display  | Verify if the subtotal in the order summary is displayed correctly  | The subtotal for each product in the order summary should be calculated and displayed correctly.  | Pass  |
+| Order Total Display  | Verify if the order total is displayed correctly  | The order total in the order summary should be calculated and displayed correctly.  | Pass  |
+| Delivery Cost Display  | Verify if the delivery cost is displayed correctly  | The delivery cost in the order summary should be calculated and displayed correctly based on the order total.  | Pass  |
+| Grand Total Display  | Verify if the grand total is displayed correctly  | The grand total in the order summary should be calculated and displayed correctly as the sum of the order total and delivery cost.  | Pass  |
+| User Details Form  | Verify if the user details form is displayed correctly  | The form fields for full name, email, phone number, country, postcode, town/city, and street address should be displayed correctly.  | Pass  |
+| Form Autofocus  | Verify if the full name field has autofocus  | The full name field should be focused automatically when the page is loaded.  | Pass  |
+| Save Info Checkbox  | Verify if the "Keep this delivery information in my profile" checkbox is displayed correctly  | The checkbox should be displayed, and if the user is authenticated, it should be checked by default. If not authenticated, a message should inform users about creating an account or logging in to save information  | Pass  |
+| Stripe Card Element  | Verify if the Stripe card element is displayed correctly  | The Stripe card input field should be displayed for users to input their payment details  | Pass  |
+| Complete Order Button  | Click on the "Complete Order" button  | If the form is valid and all required details are provided, the order should be processed, and the user should be redirected to a success page.  | Pass  |
+| Form Submission Error  | Submit the form with invalid or missing data  | If any required field is missing or invalid, an error message should be displayed, and the form submission should not be allowed.  | Pass  |
+| Adjust Bag Button  | Click on the "Adjust Bag" button  | The button should redirect the user to the shopping bag page.  | Pass  |
+| Payment Amount Warning  | Verify if the payment amount warning is displayed correctly  | A warning message should inform users that their card will be charged the correct grand total.  | Pass  |
+| Confirmation Email  | Check if a confirmation email is sent  | After a successful order placement, a confirmation email should be sent to the user's provided email address.  | Pass  |
+
+
+### Checkout Success Page
 
 | Test  | Action | Expected Results  | Pass/Fail |
 | ------------- | ------------- | ------------- | ------------- |

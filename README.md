@@ -36,6 +36,10 @@ In a world where convenience often trumps healthy choices, FF2T stands as a beac
 * [Future Features](#future-features)
 * [Web Marketing](#web-marketing)
 * [Testing](#testing)
+* [Languages](#languages)
+* [Deployment](#deployment)
+* [Credits](#credits)
+* [Acknowledgments](#acknowledgments)
 
 - - -
 
@@ -527,7 +531,7 @@ By following this keyword research documentation, I have effectively optimize th
 
 
 ## Testing
-All of the information regarding the testing can be found [here](https://github.com/Marcosmgs/).
+All of the information regarding the testing can be found [here](https://github.com/Marcosmgs/freshfarm_2_table/blob/main/TESTING.md).
 
 
 ## Languages
@@ -590,7 +594,7 @@ This website has been deployed to [Heroku](https://dashboard.heroku.com/apps) fo
 
 Code
 * Code Institute for the Walkthrough Projects mainly the Boutique Ado which inspired me to create this project
-* Tutorial on Hello [Django project](https://github.com/Code-Institute-Solutions/Django3blog) from Code Institute.
+* Tutorial [Boutique Ado](https://github.com/ckz8780/boutique_ado_v1) from Code Institute.
 * Code Institute for the CI Python Linter used throughout the project at every stage of the building.
 * [StackOverflow ](https://stackoverflow.com/)
 

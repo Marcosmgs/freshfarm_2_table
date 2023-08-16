@@ -29,8 +29,9 @@ In a world where convenience often trumps healthy choices, FF2T stands as a beac
   * [Products List](#products-list)
   * [Products Details](#products-details)
   * [My Favourite Products](#my-favourite-products)
-  * [My Shopping Bag](#my_shopping_bag)
-  * [Action Messages](#messages-&-small-bag-display)
+  * [My Shopping Bag](#my-shopping-bag)
+  * [Toast Messages](#messages-and-small-bag-display)
+  * [Checkout Page](#checkout-page)
 
 - - -
 
@@ -399,11 +400,30 @@ Entity relationship diagram was created using [Figma](https://www.figma.com/).
 * Additionally, a button is provided for users to continue shopping or proceed to checkout.
 
 
-#### **Messages & Small Bag Display**
+#### **Messages and Small Bag Display**
 ![Messages & Bag](Docs/Readme_images/features/action_messages.png)
 * This functionallity provide toast messages for various types of messages, such as errors, warnings, and successes.
 * This messages also provide a summary view of the products in the bag.
 * The data-autohide="false" attribute is added to each toast, preventing them from automatically hiding. This allows users to dismiss the toast manually.
 * Different colors and icons are used to visually distinguish between error, warning, success, and information messages.
 
+
+#### **Checkout Page**
+* Checkout page is where users can review their order, provide delivery and payment information, and complete the order process.
+* The Order summary, It lists the items in the users bag along with their quantities, total and subtotal amounts.
+* Delivery information form are displayed. There's also an option for users to save the delivery information in their profile.
+* there is a loading overlay with a spinning icon to indicate that the page is processing something in the background.
+![Checkout Page](Docs/Readme_images/features/checkout_page.png)
+
+#### **- Checkout Stripe**
+![Payment Stripe](Docs/Readme_images/features/payment_secure_stripe.png)
+* A Stripe card element is displayed for users to enter their payment details.
+* The page loads the Stripe public key and client secret, which are used for processing payments securely.
+* A separate JavaScript file (stripe_elements.js) handles the creation of Stripe elements and client side validation of the payment form. 
+* Any form errors related to payment will be displayed in the card-errors div.
+
+#### **- Checkout Success Page**
+![Checkout Success](Docs/Readme_images/features/checkout_done_page.png)
+* A checkout success page displays after successfully completing an order. It displays order details and provides options for users to navigate back to their profile or explore more offers.
+* This Checkout Success page provides users with an overview of their order details and confirms the successful completion of their order.
 

@@ -34,6 +34,7 @@ In a world where convenience often trumps healthy choices, FF2T stands as a beac
   * [Checkout Page](#checkout-page)
   * [Management Products](#management-products)
 * [Future Features](#future-features)
+* [Testing](#testing)
 
 - - -
 
@@ -448,3 +449,82 @@ The following user stories were removed from the project as time was very short 
 
 * As a Site User I can give feedback messages so that My message can be displayed in the landing page.
 * As a Site Admin I can approve or disapprove messages feedback so that I can moderate the content
+
+## Web Marketing
+
+
+#### **Bussiness Social Media Mockup Page**
+
+<details>
+<summary>Social Media</summary>
+ 
+ ![FB Page](Docs/Readme_images/features/social_media_page.png)
+ 
+</details>
+
+#### SEO Implementations
+
+Business Model: B2C transactions. 
+Business Idea: Fresh Farm 2 Table - Online Organic Produce Delivery
+Introduction: Fresh Farm 2 Table is an innovative online platform that connects health conscious consumers with locally sourced, organic produce, delivered straight to their doorstep.
+
+Our mission is to provide convenient access to fresh and sustainable food options, supporting local farmers and promoting healthy eating habits.
+
+#### **- DEV-TEES KEYWORDS**
+
+Short Tail Keywords:
+* Fresh Organic Produce
+* Farm to Table Delivery
+* Sustainable Food Delivery
+* Local Farm
+* Organic Veg Box
+
+Long Tail Keywords:
+* Best Shop for Fresh Organic Produce Delivery
+* Farm to Table Vegetable Delivery Service
+* Sustainable and Locally Sourced Food Delivery
+* Convenient Local Farm Fresh Produce Delivery
+* Customizable Organic Veg Box Delivery
+
+#### **Keyword Research Steps**
+
+1. Brainstorm General Topics:
+* Organic produce delivery
+* Farm-to-table food delivery
+* Sustainable food options
+* Local farm products
+* Customizable veg box
+* Online fresh produce ordering
+* Health-conscious meal planning
+  
+2. Brain Dump Possible Keywords for Each Topic:
+* Organic vegetable delivery
+* Farm-fresh produce delivery
+* Sustainable food delivery services
+* Local farm-to-table delivery
+* Fresh organic fruits and veggies
+* Custom organic veg box subscription
+* Order local farm products online
+* Healthy meal planning with fresh produce
+
+3. Research Brain Dump of Ideas in Google Search:
+* Conducted Google searches for each keyword phrase to identify related terms and phrases.
+* Reviewed top search results to understand the context and competition for each keyword.
+
+4. Selection of Short and Long-Tail Keywords:
+5. Assess Your Choices for Relevance and Authoritativeness
+* Checked if the selected keywords accurately reflect the business offerings.
+* Verified that the keywords align with the target audience preferences and interests.
+* Evaluated the competitiveness and potential reach of each keyword.
+
+6. Digged into the Data Available on Keyword Volume and Competition:
+* Utilized wordtracker.com to gather insights on keyword volume and competition.
+* Analyzed trends to identify potential high-impact keywords.
+* Adjusted keyword choices based on available data.
+
+By following this keyword research documentation, I have effectively optimize the project content and enhance its discoverability.
+
+## Testing
+All of the information regarding the testing can be found [here](https://github.com/Marcosmgs/).
+
+

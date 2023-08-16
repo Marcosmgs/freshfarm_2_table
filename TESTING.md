@@ -216,6 +216,50 @@
 | Cancel Deletion  | Click on the Cancel button  | Clicking the Cancel button should redirect the user back to the product detail page of the product, and no changes should be made to the product.  | Pass  |
 | Deleting a Product as a Non-Superuser  | Log in as a non-superuser and attempt to access the Delete Product  | A message should be displayed informing the user that this action is limited to store owners only. The user should be redirected to the home page.  | Pass  |
 
+
+### Django All Auth Pages
+| Test  | Action | Expected Results  | Pass/Fail |
+| ------------- | ------------- | ------------- | ------------- |
+| Sign Up  |  |  |  |
+| Log in link  | Click  | Redirect to login page  | Pass  |
+| Username field  | Leave empty  | On submit: form won't submit  | Pass  |
+| Username field  | Leave empty  | Error message displays  | Pass  |
+| Username field  | Insert correct format  | On submit: form submit  | Pass  |
+| Username field  | Insert duplicate username  | On submit: form won't submit  | Pass  |
+| Username field  | Insert duplicate username  | Error message displays  | Pass  |
+| Email field  | Insert incorrect format  | On submit: form won't submit  | Pass  |
+| Email field  | Insert incorrect format  | Error message displays  | Pass  |
+| Email field  | Insert correct format  | On submit: form submit  | Pass  |
+| Email field  | Leave empty  | On submit: form submit  | Pass  |
+| Email field  | Insert duplicate email  | On submit: form won't submit  | Pass  |
+| Email field  | Insert duplicate email  | Error message displays  | Pass  |
+| Password field  | Insert incorrect format  | On submit: form won't submit  | Pass  |
+| Password field  | Insert incorrect format  | Error message displays  | Pass  |
+| Password field  | Passwords don't match  | On submit: form won't submit  | Pass  |
+| Password field  | Passwords don't match  | Error message displays  | Pass  |
+| Password field  | Insert correct format  | 	On submit: form submit  | Pass  |
+| Sign Up button (form valid)  | Click  | Form submit  | Pass  |
+| Sign Up button (form valid)  | Click  | Redirect to home page  | Pass  |
+| Sign Up button (form valid)  | Click  | Success message confirming login appears  | Pass  |
+| Sign Up button (form valid)  | Click  | Success message fades after 3 seconds  | Pass  |
+| Log in  |  |  |  |
+| Sign up link  | Click  | 	Redirect to sign up page  | Pass  |
+| Username field  | Leave empty  | On submit: form won't submit  | Pass  |
+| Username field  | Leave empty  | 	Error message displays  | Pass  |
+| Username field  | Insert wrong username  | On submit: form won't submit  | Pass  |
+| Username field  | Insert wrong username  | Error message displays  | Pass  |
+| Password field  | Leave empty  | On submit: form won't submit  | Pass  |
+| Password field  | Leave empty  | Error message displays  | Pass  |
+| Password field  | Insert wrong password  | On submit: form won't submit  | Pass  |
+| Password field  | Insert wrong password  | Error message displays  | Pass  |
+| Login button (form valid)  | Click  | Form submit  | Pass  |
+| Login button (form valid)  | Click  | Redirect to home page  | Pass  |
+| Login button (form valid)  | Click  | Success message confirming login appears  | Pass  |
+| Login button (form valid)  | Click  | Success message fades after 3 seconds  | Pass  |
+| Log Out Confirmation  |  |  |  |
+| Logout button  | Click  | Content  | Content  |
+
+
 ## Admin Panel Testing
 * Products, Category are successfully added in the admin panel.
 

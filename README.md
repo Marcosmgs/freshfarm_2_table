@@ -32,6 +32,7 @@ In a world where convenience often trumps healthy choices, FF2T stands as a beac
   * [My Shopping Bag](#my-shopping-bag)
   * [Toast Messages](#messages-and-small-bag-display)
   * [Checkout Page](#checkout-page)
+  * [Management Products](#management-products)
 
 - - -
 
@@ -427,3 +428,14 @@ Entity relationship diagram was created using [Figma](https://www.figma.com/).
 * A checkout success page displays after successfully completing an order. It displays order details and provides options for users to navigate back to their profile or explore more offers.
 * This Checkout Success page provides users with an overview of their order details and confirms the successful completion of their order.
 
+
+#### **Management Products**
+* Allows superusers to add new products to the website.
+* It utilizes a form to collect and display product information.
+![Management Products](Docs/Readme_images/features/management_add_product.png)
+
+### **- Products CRUD**
+![Products CRUD](Docs/Readme_images/features/management_crud_functionality.png)
+* Enables superusers to edit existing products.
+* Like the add product page, it utilizes a form to collect and display product information.
+* The form fields are pre-populated with the existing product's details, which can be modified by the user. 

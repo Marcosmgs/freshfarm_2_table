@@ -79,12 +79,25 @@
 | JavaScript Interaction  | Test the JavaScript interaction of the country field  | Change the country selection and verify if the color changes accordingly  | Pass  |
 
 
+### Product List Page
 
-
+| Test  | Action | Expected Results  | Pass/Fail |
+| ------------- | ------------- | ------------- | ------------- |
+| Product List Display  | Access the product list page  | The page should display a list of products with their images, names, prices, and categories  | Pass  |
+| Product Sorting  | Test each sorting option in the "Sort by" dropdown  | The products should be sorted according to the selected option (price low-to-high, price high-to-low, name A-Z, name Z-A, category A-Z, category Z-A)  | Pass  |
+| Category Filtering  | Click on a category badge  | The page should display products from the selected category only  | Pass  |
+| Search Functionality  | Enter a search term and submit the form  | The page should display products matching the search term in their names or descriptions  | Pass  |
+| Search Functionality - Empty Query  | Submit the search form without entering any query  | An error message should appear indicating no search criteria provided  | Pass  |
+| Favorites Icon  | For a logged-in user, click on the heart icon for a product  | The heart icon should toggle between filled and outlined, indicating adding/removing the product from favorites  | Pass  |
+| Favorites Icon - Not Logged In  | Verify the behavior of the favorites icon for a not logged-in user  | The icon should not be interactive, and a login prompt should appear when clicked  | Pass  |
+| Product Number  | Verify the pagination controls  | The page should display the correct number of products per page  | Pass  |
+| Back to Top Button  | Click on the "Back to Top" button  | The page should scroll to the top  | Pass  |
+| Superuser Actions  | Log in as a superuser and check the edit/delete links for a product  | The superuser should see the "Edit" and "Delete" links next to each product  | Pass  |
+| Superuser Edit Link  | Click on the "Edit" link for a product  | The superuser should be redirected to the product edit page  | Pass  |
+| Superuser Delete Link  | Click on the "Delete" link for a product  | The superuser should be redirected to the product delete confirmation page  | Pass  |
+| Responsive Design  | Test the page responsiveness on different devices (desktop, tablet, mobile)  | The page elements should adjust and be displayed correctly on various screen sizes  | Pass  |
 
 
 | Test  | Action | Expected Results  | Pass/Fail |
 | ------------- | ------------- | ------------- | ------------- |
 | Message  | Check  | The  | Pass  |
-
-

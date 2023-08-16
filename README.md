@@ -324,4 +324,39 @@ Entity relationship diagram was created using [Figma](https://www.figma.com/).
 * This feature enables users to keep their delivery details up to date without needing to re enter them during every purchase.
 * Allowing users to update their default delivery information ensures a user-friendly experience and encourages repeat purchases by eliminating the need to repeatedly input delivery details.
 * Order history display, offers users a record of their past orders By offering an organized overview of previous orders, users can easily track their purchases and expenditures.
-![Footer](Docs/Readme_images/features/my_profile_page.png)
+![My Profile](Docs/Readme_images/features/my_profile_page.png)
+
+
+#### **Products Pages**
+
+#### **Products List**
+
+* The products list view page is where users can browse and explore the available products in your web application.
+* It provides various features for sorting, filtering, and interacting with products.
+* Each card displays product information including its image, name, price, and category.
+* Users can click on a product card to view its details.
+![Product List](Docs/Readme_images/features/product_list_page.png)
+
+#### **- Product Count**
+![Product Count](Docs/Readme_images/features/product_count.png)
+* The product counter display is a dynamic element that informs users about the total number of products currently being displayed on the page.
+* It also provides contextual information when a search term is used to filter products.
+* If a search term is provided, it also includes the search term in the display to provide context.
+
+#### **- Filters Functionality**
+![Filters Functionality](Docs/Readme_images/features/filters_functionality.png)
+* The filtering and sorting feature allows users to adjust the way products are displayed on the page.
+* This is achieved through a dropdown menu containing sorting options, which users can select to change the order of product listings.
+* Users can organize products in a way that suits their needs, whether by price, name, or category.
+
+#### **- Product Tag**
+![Product Tag](Docs/Readme_images/features/product_tag.png)
+* This tag is shown alongside the product name, price, and other details in both the products list view and the product details page.
+* The category tags display provides users with a quick visual indication and access of the category to which a product belongs.
+
+#### **- Back to Top**
+![Back To Top](Docs/Readme_images/features/back_to_top.png)
+* The "Back to Top" button in the bottom right corner provides users with a quick way to return to the top of the page.
+* This button enhances user convenience, allowing them to easily navigate back to the top of the page without manual scrolling.
+
+

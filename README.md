@@ -463,7 +463,7 @@ The following user stories were removed from the project as time was very short 
 <details>
 <summary>Social Media</summary>
  
- ![FB Page](Docs/Readme_images/features/social_media_page.png)
+ ![FB Page](Docs/Readme_images/fbmockuppage.png)
  
 </details>
 

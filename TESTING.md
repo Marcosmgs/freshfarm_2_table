@@ -177,4 +177,6 @@
 
 | Test  | Action | Expected Results  | Pass/Fail |
 | ------------- | ------------- | ------------- | ------------- |
-| Display  | Check  | The  | Pass  |
+| Success Page Display  | Access the checkout success page  | The page should display the order details, thanking the user for their order. It should show the order number, order date, order items, delivering address, billing information, order total, delivery cost, and grand total.  | Pass  |
+| Back to Profile Button  | Click on the "Back to Profile" button  | If the order was accessed from the user profile, clicking the button should redirect the user to their profile page.  | Pass  |
+| Explore Offers Button  | Click on the "Explore the most recent   | If the order was not placed from the user's profile, clicking the button should redirect the user to the products page with a specific category filter.  | Pass  |

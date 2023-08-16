@@ -98,6 +98,18 @@
 | Responsive Design  | Test the page responsiveness on different devices (desktop, tablet, mobile)  | The page elements should adjust and be displayed correctly on various screen sizes  | Pass  |
 
 
+### My Favourite Products Page
+
+| Test  | Action | Expected Results  | Pass/Fail |
+| ------------- | ------------- | ------------- | ------------- |
+| Favorite Products Display  | Access the favorite products page  | The page should display a list of favorite products with their images, names, prices, and categories  | Pass  |
+| Remove from Favorites  | Click on the "remove" link for a favorite product  | The product should be removed from the list of favorite products, and the link should change to the "Add to Favorites" link  | Pass  |
+| Add to Favorites  | Click on the "My Fav" link for a non-favorite product  | The product should be added to the list of favorite products, and the link should change to the "remove" link  | Pass  |
+| Empty Favorites  | Ensure there are no favorite products in the user's session  | A message should be displayed indicating that the favorite products session is empty, along with a "Back to Shopping" button that redirects to the products page  | Pass  |
+| Back to Shopping Button  | Click on the "Back to Shopping" button  | The button should redirect the user to the products page  | Pass  |
+| Responsive Design  | Test the page's responsiveness on different devices (desktop, tablet, mobile)  | The page elements should adjust and be displayed correctly on various screen sizes  | Pass  |
+
+
 | Test  | Action | Expected Results  | Pass/Fail |
 | ------------- | ------------- | ------------- | ------------- |
 | Message  | Check  | The  | Pass  |

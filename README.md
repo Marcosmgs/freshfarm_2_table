@@ -26,6 +26,9 @@ In a world where convenience often trumps healthy choices, FF2T stands as a beac
   * [Footer](#footer)
   * [User Account Pages](#user-account-pages)
   * [My Profile Page](#my-profile-page)
+  * [Products List](#products-list)
+  * [Products Details](#products-details)
+  * [My Favourite Products](#my-favourite-products)
 
 - - -
 
@@ -369,3 +372,18 @@ Entity relationship diagram was created using [Figma](https://www.figma.com/).
 * The quantity selector functionality allows users to specify the quantity of a product they want to add to their shopping bag.
 * The functionality includes buttons to increment and decrement the quantity, as well as restrictions to prevent selecting quantities below 1 or above 99.
 * Changes to the quantity input field immediately reflect in the overall interaction.
+
+
+#### **My Favourite Products**
+* The favorite products page displays a list of products that the user has marked as their favorites.
+* Users can click on the heart icon to toggle the product's favorite status. If a product is already a favorite, clicking the icon removes it from the favorites, and vice versa.
+![Product Details](Docs/Readme_images/features/my_favourite_products_page.png)
+
+#### **- Remove Favourite**
+![Remove Fav Product](Docs/Readme_images/features/remove_toggle_favourite.png)
+* For each product, the page shows its image, name, price, and a heart icon that allows users to remove the product from their favorites.
+
+#### **- Toggle My Favoutiter**
+![Add Fav Product](Docs/Readme_images/features/toggle_my_favoutite.png)
+* A heart icon indicates whether the product is in the users favorites or not. If the product is a favorite, a filled heart is shown otherwise, an outline heart is displayed.
+

@@ -293,3 +293,37 @@ python manage.py shell -i python -c "import allauth; print(allauth.__path__)"
 
 ### Unfixed Bugs
 No Unfixed Bugs left behind ;)
+
+
+## Code Validation
+
+### W3C HTML VALIDATION
+All html pages have been run through the [W3C HTML Validator](https://validator.w3.org/) and the below results were returned.
+
+**-HTML Checker**
+* Erros = 1. Element li not allowed as child of element nav in this context. (Suppressing further errors from this subtree.)
+* Warnings = None.
+![HTML CHECKER](Docs/Readme_images/testing/html_checker.png)
+
+All the pages were runned the HTML checker
+
+All the pages checked returned with none warnings
+
+All the pages checked returned an error due an element been used in a separate file for responsiveness purposes.
+
+I have tried to clear this erro using the context given by W3C but had no success without break the responsiveness of the page. 
+
+Therefore I am leaving this to maintain the web resposive as it wont affect the page navigation.
+
+
+## Jigsaw CSS VALIDATION
+No errors or warnings are returned when passing the styles.css through the [Jigsaw CSS Validator](https://jigsaw.w3.org/css-validator/).
+
+* ![css testing image](Docs/Readme_images/testing/css_checker.png)
+
+## JSHint JavaScript VALIDATION
+All the Scripts used in FF2T have been run through the [JSHint Javascript Validator](https://jshint.com/) and they return no errors.
+
+* ![jshint java testing](Docs/Readme_images/testing/js_testing.png)
+
+

@@ -199,12 +199,19 @@
 
 | Test  | Action | Expected Results  | Pass/Fail |
 | ------------- | ------------- | ------------- | ------------- |
-| Success  | Access  | The  | Pass  |
-
-
+| Accessing the Page  | Log in as a superuser and access the "Edit Product" page  | The page should load without errors, displaying the form to edit the selected product  | Pass  |
+| Form Display  | Verify if the product form is displayed correctly  | The form should display fields populated with the existing product's information for editing.  | Pass  |
+| Form Fields  | Verify if all required form fields are present  | All mandatory fields should be present in the form, populated with the current product's information.  | Pass  |
+| Editing Product  | Make changes to the form and submit it  | After submitting the form, the user should be redirected to the product detail page of the edited product, and a success message should be displayed.  | Pass  |
+| Form Validation  | Attempt to submit the form with missing or incorrect information  | If any required field is missing or incorrect, an error message should be displayed, and the form should not be submitted.  | Pass  |
+| Cancel Button  | Click on the "Cancel" button  | Clicking the "Cancel" button should redirect the user back to the product list page.  | Pass  |
+| Editing a Product as a Non-Superuser  | Log in as a non-superuser and access the "Edit Product" page  | A message should be displayed informing the user that this action is limited to store owners only. The user should be redirected to the home page.  | Pass  |
 
 ### Delete Product
 
 | Test  | Action | Expected Results  | Pass/Fail |
 | ------------- | ------------- | ------------- | ------------- |
-| Success  | Access  | The  | Pass  |
+| Accessing the Delete Page  | Log in as a superuser and access the "Delete Product" page  | The user should be able to access the page without errors. The page should display a confirmation message asking if the user wants to delete the selected product.  | Pass  |
+| Confirm Delete  | Click on the "Delete" button to confirm product deletion  | After clicking the "Delete" button, the product should be deleted from the database. The user should be redirected to the product list page with a success message indicating that the product was deleted.  | Pass  |
+| Cancel Deletion  | Click on the "Cancel" button  | Clicking the "Cancel" button should redirect the user back to the product detail page of the product, and no changes should be made to the product.  | Pass  |
+| Deleting a Product as a Non-Superuser  | Log in as a non-superuser and attempt to access the "Delete Product" page  | A message should be displayed informing the user that this action is limited to store owners only. The user should be redirected to the home page.  | Pass  |

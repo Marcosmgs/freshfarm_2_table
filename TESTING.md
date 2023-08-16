@@ -13,7 +13,7 @@
   * [Edit Product Page](#edit-product-page)
   * [Delete Product](#delete-product)
   * [Django All Auth Pages](#django-all-auth-pages)
-  * [Admin panel](#admin-panel)
+* [Admin panel](#admin-panel-testing)
 * [Browser Testing](#browser-testing)
 * [Bugs](#bugs)
   * [Fixed Bugs](#fixed-bugs)
@@ -211,7 +211,19 @@
 
 | Test  | Action | Expected Results  | Pass/Fail |
 | ------------- | ------------- | ------------- | ------------- |
-| Accessing the Delete Page  | Log in as a superuser and access the "Delete Product" page  | The user should be able to access the page without errors. The page should display a confirmation message asking if the user wants to delete the selected product.  | Pass  |
-| Confirm Delete  | Click on the "Delete" button to confirm product deletion  | After clicking the "Delete" button, the product should be deleted from the database. The user should be redirected to the product list page with a success message indicating that the product was deleted.  | Pass  |
-| Cancel Deletion  | Click on the "Cancel" button  | Clicking the "Cancel" button should redirect the user back to the product detail page of the product, and no changes should be made to the product.  | Pass  |
-| Deleting a Product as a Non-Superuser  | Log in as a non-superuser and attempt to access the "Delete Product" page  | A message should be displayed informing the user that this action is limited to store owners only. The user should be redirected to the home page.  | Pass  |
+| Accessing Delete  | Log in as a superuser and access the Delete Product option  | The user should be able to access the page without errors. The page should display a confirmation message asking if the user wants to delete the selected product.  | Pass  |
+| Confirm Delete  | Click on the Delete button to confirm product deletion  | After clicking the "Delete" button, the product should be deleted from the database. The user should be redirected to the product list page with a success message indicating that the product was deleted.  | Pass  |
+| Cancel Deletion  | Click on the Cancel button  | Clicking the Cancel button should redirect the user back to the product detail page of the product, and no changes should be made to the product.  | Pass  |
+| Deleting a Product as a Non-Superuser  | Log in as a non-superuser and attempt to access the Delete Product  | A message should be displayed informing the user that this action is limited to store owners only. The user should be redirected to the home page.  | Pass  |
+
+## Admin Panel Testing
+* Products, Category are successfully added in the admin panel.
+
+* Admins have full access to CRUD functionality for all products and categories in the admin panel.
+
+* Admins also have full moderation over the user.
+
+* Django Allauth works successfully and the admins can change users permissions.
+
+## Browser Testing
+* The Website was tested on Google Chrome, Firefox, Safari browsers with no issues noted.

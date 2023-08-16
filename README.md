@@ -25,6 +25,7 @@ In a world where convenience often trumps healthy choices, FF2T stands as a beac
   * [Home Page](#home-page)
   * [Footer](#footer)
   * [User Account Pages](#user-account-pages)
+  * [My Profile Page](#my-profile-page)
 
 - - -
 
@@ -315,3 +316,12 @@ Entity relationship diagram was created using [Figma](https://www.figma.com/).
  ![Log Out image](Docs/Readme_images/features/sign_out_page.png)
  
 </details>
+
+
+#### **My Profile Page**
+
+* The page starts with a form that allows users to update their default delivery information.
+* This feature enables users to keep their delivery details up to date without needing to re enter them during every purchase.
+* Allowing users to update their default delivery information ensures a user-friendly experience and encourages repeat purchases by eliminating the need to repeatedly input delivery details.
+* Order history display, offers users a record of their past orders By offering an organized overview of previous orders, users can easily track their purchases and expenditures.
+![Footer](Docs/Readme_images/features/my_profile_page.png)

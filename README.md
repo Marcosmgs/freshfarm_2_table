@@ -330,7 +330,6 @@ Entity relationship diagram was created using [Figma](https://www.figma.com/).
 #### **Products Pages**
 
 #### **Products List**
-
 * The products list view page is where users can browse and explore the available products in your web application.
 * It provides various features for sorting, filtering, and interacting with products.
 * Each card displays product information including its image, name, price, and category.
@@ -360,3 +359,13 @@ Entity relationship diagram was created using [Figma](https://www.figma.com/).
 * This button enhances user convenience, allowing them to easily navigate back to the top of the page without manual scrolling.
 
 
+#### **Products Details**
+* The product details view provides users with comprehensive information about a specific product.
+* Users can effortlessly add products to the shopping bag or mark them as favorites.
+![Product Details](Docs/Readme_images/features/product_details_page.png)
+
+#### **- Quatity Selector**
+![Quatity Selector](Docs/Readme_images/features/qty_functionality.png)
+* The quantity selector functionality allows users to specify the quantity of a product they want to add to their shopping bag.
+* The functionality includes buttons to increment and decrement the quantity, as well as restrictions to prevent selecting quantities below 1 or above 99.
+* Changes to the quantity input field immediately reflect in the overall interaction.

@@ -4,7 +4,8 @@
   * [Index Page](#index-page)
   * [My Profile Page](#my-profile-page)
   * [Product List Page](#product-list-page)
-  * [My Favourite Products Page](#my-favourite-products)
+  * [My Favourite Products Page](#my-favourite-products-page)
+  * [Products Details Page](#products-details-page)
   * [Shopping Bag Page](#shopping-bag-page)
   * [Checkout Page](#shopping-bag-page)
   * [Checkout Success Page](#checkout-success-page)
@@ -108,6 +109,30 @@
 | Empty Favorites  | Ensure there are no favorite products in the user's session  | A message should be displayed indicating that the favorite products session is empty, along with a "Back to Shopping" button that redirects to the products page  | Pass  |
 | Back to Shopping Button  | Click on the "Back to Shopping" button  | The button should redirect the user to the products page  | Pass  |
 | Responsive Design  | Test the page's responsiveness on different devices (desktop, tablet, mobile)  | The page elements should adjust and be displayed correctly on various screen sizes  | Pass  |
+
+
+### Products Details
+
+| Test  | Action | Expected Results  | Pass/Fail |
+| ------------- | ------------- | ------------- | ------------- |
+| Product Details Display  | Access the product details page for a specific product  | The page should display the product's image, name, price, category, description, quantity input, "Add to Bag" button, and "Keep Shopping" button  | Pass  |
+| Product Image  | Verify if the product image is displayed correctly  | The product image should be displayed, and it should either show the product image or a default placeholder image  | Pass  |
+| Product Name  | Verify if the product name is displayed correctly  | The name of the product should be displayed as specified in the data  | Pass  |
+| Product Price and Unity  | Verify if the product price and unity are displayed correctly  | The price per unity of the product should be displayed as specified in the data  | Pass  |
+| Product Category  | Verify if the product category is displayed correctly  | If the product has a category, the category should be displayed with its friendly name  | Pass  |
+| Edit and Delete (Superuser)  | Check if the "Edit" and "Delete" links are displayed for a superuser  | If the user is a superuser, the "Edit" and "Delete" links should be displayed  | Pass  |
+| Edit Link  | Click on the "Edit" link  | The link should redirect the user to the product edit page for the specific product  | Pass  |
+| Delete Link  | Click on the "Delete" link  | The link should open a confirmation dialog to delete the product, and upon confirmation, the product should be deleted  | Pass  |
+| Product Description  | Verify if the product description is displayed correctly  | The description of the product should be displayed as specified in the data  | Pass  |
+| Quantity Input  | Verify if the quantity input is displayed correctly  | The input should be displayed with default value "1" and minimum value "1"  | Pass  |
+| Increment Quantity  | Click on the "Increment" button for quantity input  | The value in the quantity input should increase by 1, and the "+" button should be disabled if the value reaches 99  | Pass  |
+| Decrement Quantity  | Click on the "Decrement" button for quantity input  | The value in the quantity input should decrease by 1, and the "-" button should be disabled if the value reaches 1  | Pass  |
+| Add to Bag  | Click on the "Add to Bag" button  | The product should be added to the user's shopping bag with the selected quantity, and a success message should be displayed  | Pass  |
+| My Favorites  | Verify if the "My Favorites" heart icon is displayed correctly  | If the product is favorited by the user, a filled heart icon should be displayed; otherwise, an empty heart icon should be displayed  | Pass  |
+| Toggle Favorites  | Click on the "My Favorites" heart icon  | If the product is favorited, it should be removed from the user's favorites; if it's not favorited, it should be added to the user's favorites  | Pass  |
+| Keep Shopping Button  | Click on the "Keep Shopping" button  | The button should redirect the user to the products page  | Pass  |
+| Responsive Design  | Test the page's responsiveness on different devices (desktop, tablet, mobile)  | The page elements should adjust and be displayed correctly on various screen sizes  | Pass  |
+
 
 
 | Test  | Action | Expected Results  | Pass/Fail |

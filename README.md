@@ -34,6 +34,7 @@ In a world where convenience often trumps healthy choices, FF2T stands as a beac
   * [Checkout Page](#checkout-page)
   * [Management Products](#management-products)
 * [Future Features](#future-features)
+* [Web Marketing](#web-marketing)
 * [Testing](#testing)
 
 - - -
@@ -450,8 +451,8 @@ The following user stories were removed from the project as time was very short 
 * As a Site User I can give feedback messages so that My message can be displayed in the landing page.
 * As a Site Admin I can approve or disapprove messages feedback so that I can moderate the content
 
-## Web Marketing
 
+## Web Marketing
 
 #### **Bussiness Social Media Mockup Page**
 
@@ -524,7 +525,62 @@ Long Tail Keywords:
 
 By following this keyword research documentation, I have effectively optimize the project content and enhance its discoverability.
 
+
 ## Testing
 All of the information regarding the testing can be found [here](https://github.com/Marcosmgs/).
 
 
+## Languages
+
+* Python
+* Javascript
+* HTML
+* CSS
+
+
+## Deployment
+
+This website has been deployed to [Heroku](https://dashboard.heroku.com/apps) following these steps:
+
+**Create the Heroku App**
+
+1. Log in to your Heroku account and, after clicking on the New button in the top-right corner of the page, select the Create new app option from the dropdown menu.
+2. Insert an app name and choose a region (Europe or United States) and click on the Create app button.
+3. From the Settings, click "Reveal Config Vars"
+4. Add a Config Var called DATABASE_URL and give it the value of the ElephantSQL database URL created.
+5. Add a Config Var called PORT with value 8000
+
+**Attach the Postgres database**
+
+6. In the terminal, create the env.py file on the top level directory, setting in it the environment variables and adding in the secret key
+7. In Heroku, add SECRET_KEY to Config Vars
+8. PREPARE THE ENVIRONMENT AND SETTINGS.PY FILE
+9. Reference env.py file in settings.py file
+10. Replace the insecure secret key, linking it with the one declared in the Config Vars in Heroku, comment out the default database section and add the new database section the links to the DATABASE_URL in Heroku
+11. Save all files and in the terminal make the migrations
+
+**Using AWS S3 for Static and Media Files**
+
+12. Create an AWS Account: If you don't have an AWS account, sign up for one at [aws](https://aws.amazon.com)
+13. Create an S3 Bucket.
+14. Configure S3 Bucket for Static Files.
+15. Configure S3 Bucket for Media Files.
+16. Set Up IAM User for Access.
+17. Install Required Packages.
+18. Update Django Settings and Configure Static and Media Storage.
+19. Link Files to Templates and Configure Heroku to deploy.
+
+**Create Files**
+
+20. Create 3 new folders on the top level directory: media, static, templates
+21. Create a Procfile on the top level directory
+22. In the Procfile, add the code: web: gunicorn PROJ_NAME.wsgi
+23. Save all files; add, commit and push to Github
+
+**Deployment**
+
+24. **_IMPORTANT_**: Set Debug to False in settings.py file
+25. Add the setting X-FRAME_OPTIONS = 'SAMEORIGIN' to settings.py file for Summernote
+26. In Heroku, delete the Config Var DISABLE_COLLECTSTATIC
+27. Go to the Deploy Tab and, scrolling down, either Enable Automatic Deploys or Manually Deploy by selecting the chosen branch and clicking on Deploy Branch
+28. VIEW LIVE SITE The site is up and running and can be viewed by clicking on the Open app button on the top right side of the project's window on Heroku.

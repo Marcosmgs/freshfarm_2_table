@@ -38,7 +38,7 @@ body {
     color: #E55B7E;
 }
 
-#product-fav-i-color{
+.product-fav-i-color{
     color: #E55B7E;
 }
 
@@ -309,7 +309,7 @@ a.category-badge > span.badge:hover {
 
 /* Slightly smaller nav on medium screens */
 @media (min-width: 576px) {
-    #image-card {
+    .image-card {
         width: 12rem;
     }    
 }

@@ -24,7 +24,7 @@
             {% if favorite_products %}
                 {% for product in favorite_products %}
                 <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3 mb-5">
-                    <div id="image-card" class="card h-100 border-0">
+                    <div class="card h-100 border-0 image-card">
                         {% if product.image %}
                         <a href="{% url 'product_detail' product.id %}">
                             <img class="card-img-top img-fluid" src="{{ product.image.url }}" alt="{{ product.name }}">
@@ -54,13 +54,7 @@
                                     {% if product.favorited %}
                                     <a href="{% url 'toggle_favorite' product.id %}" class="text-decoration-none">
                                         <p class="text-center text-danger mt-1 d-block"><small>remove</small>
-                                            <i id="product-fav-i-color" class="fas fa-heart fa-lg d-block"></i>
-                                        </p>
-                                    </a>
-                                    {% else %}
-                                    <a href="{% url 'toggle_favorite' product.id %}" class="text-decoration-none">
-                                        <p class="text-center text-color mt-1 d-block"><small>My Fav</small>
-                                            <i class="far fa-heart fa-lg d-block"></i>
+                                            <i class="fas fa-heart fa-lg d-block product-fav-i-color"></i>
                                         </p>
                                     </a>
                                     {% endif %}

@@ -10,6 +10,7 @@ body {
     font-family: 'Lato', sans-serif;
 }
 
+
 .logo-img {
     width: 80px;
     height: 80px;
@@ -237,10 +238,13 @@ a.category-badge > span.badge:hover {
 #mc_embed_signup {
     clear:left; 
     font:14px Helvetica,Arial,sans-serif;
-    color: white;
-    width: 300px;
-}
+    color: #000;
+    background-color: rgb(199, 214, 200, 0.5);
+    width: auto;
+    height: 180px;
 
+    border-radius: 5px;
+}
 
 /* -------------------------------- Media Queries */
 

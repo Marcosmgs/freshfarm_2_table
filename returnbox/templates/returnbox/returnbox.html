@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_header %}
+    <div class="container header-container mb-5">
+        <div class="row">
+            <div class="col"></div>
+        </div>
+    </div>
+{% endblock %}
+
+
+{% block content %}
+    <div class="overlay"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col text-center">
+                <hr class="w-50 mb-2" style="border:1px solid black">
+                <h2 class="logo-font">Return & Earn</h2>
+                <hr class="w-50" style="border:1px solid black">
+            </div>
+        </div>
+        <div class="row">
+            <div class="text-center">
+                {% if request.user.is_authenticated %}
+                    <p>
+                        You have no boxes to be return, check out our fresh 
+                        farm box selection of products with returnable 
+                        boxes option so you can earn money to use 
+                        in your next shopping and save the planet!
+                    </p>
+                {% else %}
+            </div>
+            <div class="col text-center">
+                <p>
+                    Already have an account? Then please <a href="{% url 'account_login' %}">sign in.</a>
+                </p>
+                <p>
+                    Join our community today and get the chance to
+                    make this planet a better place please <a href="{% url 'account_signup' %}">sign up!</a>
+                </p>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+{% endblock %}

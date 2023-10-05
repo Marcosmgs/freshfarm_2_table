@@ -29,6 +29,11 @@ class Product(models.Model):
     is_favorited = models.ManyToManyField(User,
                                           related_name='my_favourites',
                                           blank=True)
+    is_eligible_for_return = models.BooleanField(
+        default=False,
+        help_text="Check this box if the product is eligible for box return."
+    )
 
+    
     def __str__(self):
         return self.name

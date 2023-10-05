@@ -34,6 +34,8 @@ def checkout(request):
         order_form = OrderForm(form_data)
         if order_form.is_valid():
             order = order_form.save()
+            total_eligible_boxes = 0  # Init qty of eligible boxes
+
             for item_id, item_data in bag.items():
                 try:
                     product = Product.objects.get(id=item_id)
@@ -43,6 +45,12 @@ def checkout(request):
                         quantity=item_data,
                     )
                     order_line_item.save()
+
+                    # Check if the product is eligible for box return
+                    if product.is_eligible_for_return:
+                        total_eligible_boxes += item_data  # Increment the total
+
+
                 except Product.DoesNotExist:
                     messages.error(request, ("We couldn't find one \
                     of the items in your bag in our records. \
@@ -50,6 +58,13 @@ def checkout(request):
 
                     order.delete()
                     return redirect(reverse('view_bag'))
+
+            # Update the user's box balance
+            if total_eligible_boxes > 0:
+                user_profile = UserProfile.objects.get(user=request.user)
+                user_profile.box_balance += total_eligible_boxes
+                user_profile.save()
+                print(f'this is added to your balance = {total_eligible_boxes}')
 
             request.session['save_info'] = 'save-info' in request.POST
             return redirect(reverse('checkout_success',

@@ -19,6 +19,8 @@ class UserProfileForm(forms.ModelForm):
             'default_street_address': 'Street Address',
             'default_postcode': 'Post Code',
             'default_town_or_city': 'Town or City',
+            'box_balance': 'Box Balance',
+            'refund_balance': 'Refund Balance',
         }
 
         self.fields['default_phone_number'].widget.attrs['autofocus'] = True

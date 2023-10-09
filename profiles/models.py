@@ -22,7 +22,6 @@ class UserProfile(models.Model):
     default_street_address = models.CharField(max_length=80, null=True,
                                               blank=True)
     box_balance = models.PositiveIntegerField(default=0)
-    refund_balance = models.DecimalField(max_digits=10, decimal_places=2, default=0)
 
     def __str__(self):
         return self.user.username

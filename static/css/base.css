@@ -145,6 +145,10 @@ body {
     color: white !important;
 }
 
+.return-history {
+    max-height: 316px; /* height of request form + submit button */
+    overflow-y: auto;
+}
 
 .overlay {
 	height: 100%;

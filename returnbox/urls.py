@@ -4,6 +4,6 @@ from . import views
 
 
 urlpatterns = [
-    path('returnbox', views.returnbox, name='returnbox')
-
+    path('returnbox', views.returnbox, name='returnbox'),
+    path('box_return_request', views.box_return_request, name='box_return_request'),
 ]

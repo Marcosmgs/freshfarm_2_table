@@ -16,26 +16,78 @@
         <div class="row">
             <div class="col text-center">
                 <hr class="w-50 mb-2" style="border:1px solid black">
-                <h2 class="logo-font">Return & Earn</h2>
+                <h2 class="logo-font">Return Your Box</h2>
                 <hr class="w-50" style="border:1px solid black">
             </div>
         </div>
         <div class="row">
-            <div class="text-center">
+            <div class="col-12 col-lg-6">
                 {% if request.user.is_authenticated %}
-                    <p>
-                        You have no boxes to be return, check out our fresh 
-                        farm box selection of products with returnable 
-                        boxes option so you can earn money to use 
-                        in your next shopping and save the planet!
-                    </p>
-                    <a href="{% url 'products' %}?category=family_box,medium_box,small_box" class="btn btn-outline-green rounded-1 btn-lg">
-                        <span class="icon">
-                            <i class="fas fa-chevron-left"></i>
-                        </span>
-                        <span class="text-uppercase">Returnable Box Selection</span>
-                    </a>
-
+                {% if user_profile and user_profile.box_balance > 0 %}
+                <p class="text-muted">Kindly complete the form to request a return for your boxes.</p>
+                <hr class="my-0">
+                <p  class="mt-2 font-weight-bold">My Box Balance: <strong class="text-success">{{ user_profile.box_balance }}</strong></p>
+                <p  class="mt-2 font-weight-bold">Fixe Price Per Box: <strong>$4.00</strong></p>
+                <hr class="my-0">
+                <div>
+                    <form class="form" action="{% url 'box_return_request' %}" method="POST">
+                        {% csrf_token %}
+                        <div class="form-row">
+                            <div class="col-12">
+                                <p class="mt-1"><strong>Select quantity of boxes you like to return:</strong></p>
+                                <div class="form-group w-50">
+                                    <div class="input-group">
+                                        <div class="input-group-prepend">
+                                            <button class="decrement-qty btn btn-color rounded-0" 
+                                                data-item_id="">
+                                                <span class="icon">
+                                                    <i class="fas fa-minus"></i>
+                                                </span>
+                                            </button>
+                                        </div>
+                                        <input class="form-control qty_input" type="number" 
+                                            name="quantity" value="1" min="1" max="99" 
+                                            data-item_id="" 
+                                            id="">
+                                        <div class="input-group-append">
+                                            <button class="increment-qty btn btn-color rounded-0"
+                                                data-item_id="">
+                                                <span class="icon">
+                                                    <i class="fas fa-plus"></i>
+                                                </span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <a href="{% url 'products' %}" class="btn btn-outline-green mb-4">
+                                    <span class="icon">
+                                        <i class="fas fa-chevron-left"></i>
+                                    </span>
+                                    <span class="text-uppercase">Keep Shopping</span>
+                                </a>
+                                <input type="submit" class="btn shop-now-btn text-uppercase mb-4" value="Request Box Return">
+                            </div>
+                            <input type="hidden" name="redirect_url" value="{{ request.path }}">
+                        </div>
+                    </form>
+                </div>
+                {% else %}
+                <p>
+                    You have no boxes to be return, check out our fresh 
+                    farm box selection of products with returnable 
+                    boxes option so you can earn money to use 
+                    in your next shopping and save the planet!
+                    BOX BALANCE {{ user_profile.box_balance }}
+                </p>
+                <a href="{% url 'products' %}?category=family_box,medium_box,small_box" class="btn btn-outline-green rounded-1 btn-lg">
+                    <span class="icon">
+                        <i class="fas fa-chevron-left"></i>
+                    </span>
+                    <span class="text-uppercase">Returnable Box Selection</span>
+                </a>
+                {% endif %}
                 {% else %}
             </div>
             <div class="col text-center">
@@ -48,6 +100,41 @@
                 </p>
                 {% endif %}
             </div>
+            <div class="col-12 col-lg-6 order-lg-last">      
+                <p class="text-muted">Box Return Manager</p>
+                <div class="return-history table-responsive">
+                    <table class="table table-sm">
+                        <hr class="my-0">
+                        <thead>
+                            <tr>
+                                <th>Date</th>
+                                <th>Requested to Return</th>
+                                <th>Status</th>
+                                <!-- Add more table headings for other details if needed -->
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for box_return in box_returns %}
+                            <tr>
+                                <td>{{ box_return.timestamp }}</td>
+                                <td class="text-center">{{ box_return.number_of_boxes_returned }}</td>
+                                <td>{{ box_return.status }}</td>
+                                <!-- Add more table cells for other details if needed -->
+                            </tr>
+                            {% empty %}
+                            <tr>
+                                <td colspan="3">No box return history available.</td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
         </div>
     </div>
+{% endblock %}
+
+{% block postloadjs %}
+{{ block.super }}
+{% include 'products/includes/qty_input_script.html' %}
 {% endblock %}

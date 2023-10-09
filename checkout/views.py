@@ -142,7 +142,11 @@ def checkout_success(request, order_number):
     """
     save_info = request.session.get('save_info')
     order = get_object_or_404(Order, order_number=order_number)
-
+    box_return_request = None  # Initialize box_return_request to None
+    # Check if the 'box_return_request' key is in request.session
+    if 'box_return_request' in request.session:
+        box_return_request = request.session['box_return_request']
+    
     if request.user.is_authenticated:
         profile = UserProfile.objects.get(user=request.user)
         # Attach the user profile to the order
@@ -175,6 +179,7 @@ def checkout_success(request, order_number):
     template = 'checkout/checkout_success.html'
     context = {
         'order': order,
+        'box_return_request': box_return_request,  # Include box_return_request in the context
     }
 
     return render(request, template, context)

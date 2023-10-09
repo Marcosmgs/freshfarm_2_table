@@ -115,6 +115,37 @@
                             </div>
                         </div>
                     </div>
+                    {% if box_return_request %}
+                    <div class="order-section">
+                        <h6 class="text-muted">Box Return Request:</h6>
+                        <div class="box-return-request">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <p class="font-weight-bold text-color">Request Date:</p>
+                                </div>
+                                <div class="col-md-8 text-md-right">
+                                    <p>{{ box_return_request.request_date }}</p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <p class="font-weight-bold text-color">Box Return Quantity:</p>
+                                </div>
+                                <div class="col-md-8 text-md-right">
+                                    <p>{{ box_return_request.quantity }}</p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <p class="font-weight-bold text-color">Status:</p>
+                                </div>
+                                <div class="col-md-8 text-md-right">
+                                    <p>{{ box_return_request.status }}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {% endif %}
                 </div>                                
             </div>
         </div>

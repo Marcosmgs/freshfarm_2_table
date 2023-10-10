@@ -5,6 +5,8 @@ from .models import BoxReturn
 import datetime
 from django.contrib.auth.decorators import login_required
 from django.urls import reverse
+from .models import Feedback
+from .forms import FeedbackForm
 
 # Create your views here.
 
@@ -83,3 +85,35 @@ def remove_box_return(request, box_return_id):
         messages.success(request, f'Successfully removed box return request.')
 
     return redirect('returnbox')  # Redirect back to the returnbox page
+
+
+@login_required
+def feedback(request):
+    form = FeedbackForm()
+
+    # Query the Feedback model to get user's feedback submissions
+    user_feedback = Feedback.objects.filter(user=request.user)
+
+    return render(request, 'returnbox/feedback.html', {'form': form, 'user_feedback': user_feedback})
+
+
+@login_required
+def submit_feedback(request):
+    if request.method == 'POST':
+        form = FeedbackForm(request.POST)
+        if form.is_valid():
+            user = request.user
+            subject = form.cleaned_data['subject']
+            message = form.cleaned_data['message']
+
+            feedback = Feedback(user=user, subject=subject, message=message)
+            feedback.save()
+
+            messages.success(request, 'Thank you for your feedback!')
+
+            return redirect('returnbox')  # Redirect to a relevant page
+
+    else:
+        form = FeedbackForm()
+
+    return render(request, 'returnbox/feedback.html', {'form': form})

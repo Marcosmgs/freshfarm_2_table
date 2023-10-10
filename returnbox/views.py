@@ -1,9 +1,10 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib import messages
 from profiles.models import UserProfile
 from .models import BoxReturn
 import datetime
 from django.contrib.auth.decorators import login_required
+from django.urls import reverse
 
 # Create your views here.
 
@@ -21,7 +22,7 @@ def returnbox(request):
 
     return render(request, 'returnbox/returnbox.html', context)
 
-
+@login_required
 def box_return_request(request):
     
     if request.method == 'POST':
@@ -59,5 +60,26 @@ def box_return_request(request):
             'request_date': datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S'),
             'status': 'pending',
         }
+
+    return redirect('returnbox')  # Redirect back to the returnbox page
+
+
+@login_required
+def remove_box_return(request, box_return_id):
+    # Fetch the box return object by ID
+    box_return = get_object_or_404(BoxReturn, id=box_return_id)
+
+    if box_return.status == 'pending':
+        user_profile = box_return.user
+        quantity = box_return.number_of_boxes_returned
+        
+        # Update user's box balance before removing the box return request
+        user_profile.box_balance += quantity
+        user_profile.save()
+        
+        # Add your logic to handle the remove action (e.g., deleting the box return)
+        box_return.delete()
+
+        messages.success(request, f'Successfully removed box return request.')
 
     return redirect('returnbox')  # Redirect back to the returnbox page

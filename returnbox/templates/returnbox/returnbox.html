@@ -27,7 +27,6 @@
                 <p class="text-muted">Kindly complete the form to request a return for your boxes.</p>
                 <hr class="my-0">
                 <p  class="mt-2 font-weight-bold">My Box Balance: <strong class="text-success">{{ user_profile.box_balance }}</strong></p>
-                <p  class="mt-2 font-weight-bold">Fixe Price Per Box: <strong>$4.00</strong></p>
                 <hr class="my-0">
                 <div>
                     <form class="form" action="{% url 'box_return_request' %}" method="POST">
@@ -110,6 +109,7 @@
                                 <th>Date</th>
                                 <th>Requested to Return</th>
                                 <th>Status</th>
+                                <th>Cancel</th>
                                 <!-- Add more table headings for other details if needed -->
                             </tr>
                         </thead>
@@ -119,11 +119,17 @@
                                 <td>{{ box_return.timestamp }}</td>
                                 <td class="text-center">{{ box_return.number_of_boxes_returned }}</td>
                                 <td>{{ box_return.status }}</td>
+                                {% if box_return.status == 'pending' %}
+                                <td><a href="{% url 'remove_box_return' box_return.id %}">Cancel</a></td>
+                                {% else %}
+                                <td></td>
+                                <td></td>
+                                {% endif %}
                                 <!-- Add more table cells for other details if needed -->
                             </tr>
                             {% empty %}
                             <tr>
-                                <td colspan="3">No box return history available.</td>
+                                <td colspan="5">No box return history available.</td>
                             </tr>
                             {% endfor %}
                         </tbody>

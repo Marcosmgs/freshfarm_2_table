@@ -1,0 +1,82 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_header %}
+    <div class="container header-container mb-5">
+        <div class="row">
+            <div class="col"></div>
+        </div>
+    </div>
+{% endblock %}
+
+
+{% block content %}
+    <div class="overlay"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col text-center">
+                <hr class="w-50 mb-2" style="border:1px solid black">
+                <h2 class="logo-font">Feedback & Improve</h2>
+                <hr class="w-50" style="border:1px solid black">
+            </div>
+        </div>
+        <div class="row" style="height: calc(95vh - 164px)">
+            <div class="col-12 col-lg-6">
+                <p class="text-muted">Kindly submit your feedback to improve our Box Return Tool</p>
+                <hr class="mb-2">
+                <form method="post" action="{% url 'submit_feedback' %}">
+                    {% csrf_token %}
+                    <div class="form-group">
+                        <label for="id_subject">Subject:</label>
+                        {{ form.subject }}
+                    </div>
+                    <div class="form-group">
+                        <label for="id_message">Message:</label>
+                        {{ form.message }}
+                    </div>
+                    <div class="col-12">
+                        <a href="{% url 'returnbox' %}" class="btn btn-outline-green mb-4">
+                            <span class="icon">
+                                <i class="fas fa-chevron-left"></i>
+                            </span>
+                            <span class="text-uppercase">Box Return Tool</span>
+                        </a>
+                        <input type="submit" class="btn shop-now-btn text-uppercase mb-4" value="Submit Feedback">
+                    </div>
+                    <input type="hidden" name="redirect_url" value="{{ request.path }}">
+                </form>
+            </div>
+            <div class="col-12 col-lg-6 order-lg-last">      
+                <p class="text-muted">My Feedbacks Status</p>
+                <div class="return-history table-responsive">
+                    <table class="table table-sm">
+                        <thead>
+                            <tr>
+                                <th>Date</th>
+                                <th>Subject</th>
+                                <th>Resolved</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for feedback in user_feedback %}
+                            <tr>
+                                <td>{{ feedback.created_at }}</td>
+                                <td>{{ feedback.subject }}</td>
+                                <td>{% if feedback.resolved %}Yes{% else %}No{% endif %}</td>
+                            </tr>
+                            {% empty %}
+                            <tr>
+                                <td colspan="3">No feedback submissions yet.</td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block postloadjs %}
+{{ block.super }}
+{% endblock %}

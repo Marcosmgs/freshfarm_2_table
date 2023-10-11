@@ -2,6 +2,9 @@ from django.contrib import admin
 from .models import BoxReturn
 from profiles.models import UserProfile
 from .models import Feedback
+from .models import NewsletterSubscriber
+from django.http import HttpResponse
+import csv
 
 
 @admin.register(BoxReturn)
@@ -52,3 +55,24 @@ class FeedbackAdmin(admin.ModelAdmin):
     def mark_unresolved(self, request, queryset):
         queryset.update(resolved=False)
         self.message_user(request, f'Marked {queryset.count()} feedback submissions as unresolved.')
+
+
+def export_selected_subscribers(modeladmin, request, queryset):
+    response = HttpResponse(content_type='text/csv')
+    response['Content-Disposition'] = 'attachment; filename="subscribers.csv"'
+
+    writer = csv.writer(response)
+    writer.writerow(['Email', 'Name', 'Subscribed At'])
+
+    for subscriber in queryset:
+        writer.writerow([subscriber.email, subscriber.name, subscriber.subscribed_at])
+
+    return response
+
+export_selected_subscribers.short_description = 'Export selected subscribers to CSV'
+
+
+@admin.register(NewsletterSubscriber)
+class NewsletterSubscriberAdmin(admin.ModelAdmin):
+    list_display = ('email', 'name', 'subscribed_at')
+    actions = [export_selected_subscribers]

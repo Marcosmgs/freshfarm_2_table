@@ -9,4 +9,5 @@ urlpatterns = [
     path('submit_feedback/', views.submit_feedback, name='submit_feedback'),
     path('feedback/', views.feedback, name='feedback'),
     path('remove_box_return/<int:box_return_id>/', views.remove_box_return, name='remove_box_return'),
+    path('subscribe/', views.subscribe_newsletter, name='subscribe_newsletter'),
 ]

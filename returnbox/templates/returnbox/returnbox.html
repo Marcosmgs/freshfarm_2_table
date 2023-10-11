@@ -137,10 +137,21 @@
                 </div>
             </div>
         </div>
-        <div class="col-12">
-            <a href="{% url 'feedback' %}" class="btn btn-outline-green mb-4">
-                <span class="text-uppercase">Submit a Feedback to Improve the Tool</span>
-            </a>
+        <div class="row" style="height: calc(85vh - 164px)">
+            <div class="col">
+                <p class="text-muted">Kindly Submit a Feedback to Improve this Tool.</p>
+                <hr class="my-0">
+                <a href="{% url 'feedback' %}" class="btn btn-outline-green mb-4">
+                    <span class="text-uppercase">Feedback</span>
+                </a>
+            </div>
+            <div class="col">
+                <p class="text-muted">Sign Up to our Box Return Newsletter.</p>
+                <hr class="my-0">
+                <a href="{% url 'subscribe_newsletter' %}" class="btn btn-outline-green mb-4">
+                    <span class="text-uppercase">Keep me Updated!</span>
+                </a>
+            </div>    
         </div>
     </div>
 {% endblock %}

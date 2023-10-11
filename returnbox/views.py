@@ -7,6 +7,8 @@ from django.contrib.auth.decorators import login_required
 from django.urls import reverse
 from .models import Feedback
 from .forms import FeedbackForm
+from .forms import NewsletterSubscriptionForm
+
 
 # Create your views here.
 
@@ -117,3 +119,8 @@ def submit_feedback(request):
         form = FeedbackForm()
 
     return render(request, 'returnbox/feedback.html', {'form': form})
+
+
+def subscribe_newsletter(request):
+    form = NewsletterSubscriptionForm()
+    return render(request, 'returnbox/subscribe.html', {'form': form})

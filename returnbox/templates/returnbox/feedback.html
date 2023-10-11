@@ -1,6 +1,8 @@
 {% extends "base.html" %}
 {% load static %}
 
+{% load crispy_forms_tags %}
+
 {% block page_header %}
     <div class="container header-container mb-5">
         <div class="row">
@@ -20,20 +22,13 @@
                 <hr class="w-50" style="border:1px solid black">
             </div>
         </div>
-        <div class="row" style="height: calc(95vh - 164px)">
+        <div class="row" style="height: calc(105vh - 164px)">
             <div class="col-12 col-lg-6">
                 <p class="text-muted">Kindly submit your feedback to improve our Box Return Tool</p>
                 <hr class="mb-2">
                 <form method="post" action="{% url 'submit_feedback' %}">
                     {% csrf_token %}
-                    <div class="form-group">
-                        <label for="id_subject">Subject:</label>
-                        {{ form.subject }}
-                    </div>
-                    <div class="form-group">
-                        <label for="id_message">Message:</label>
-                        {{ form.message }}
-                    </div>
+                    {{ form|crispy }}
                     <div class="col-12">
                         <a href="{% url 'returnbox' %}" class="btn btn-outline-green mb-4">
                             <span class="icon">

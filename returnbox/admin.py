@@ -1,6 +1,7 @@
 from django.contrib import admin
 from .models import BoxReturn
 from profiles.models import UserProfile
+from .models import Feedback
 
 
 @admin.register(BoxReturn)
@@ -34,3 +35,20 @@ class BoxReturnAdmin(admin.ModelAdmin):
             box_return.save()
             
             self.message_user(request, f'Successfully rejected {box_return.number_of_boxes_returned} box returns.')
+
+
+
+@admin.register(Feedback)
+class FeedbackAdmin(admin.ModelAdmin):
+    list_display = ('user', 'subject', 'created_at', 'resolved')
+    list_filter = ('resolved', 'created_at')
+    search_fields = ['user__username', 'subject']
+    actions = ['mark_resolved', 'mark_unresolved']
+
+    def mark_resolved(self, request, queryset):
+        queryset.update(resolved=True)
+        self.message_user(request, f'Marked {queryset.count()} feedback submissions as resolved.')
+
+    def mark_unresolved(self, request, queryset):
+        queryset.update(resolved=False)
+        self.message_user(request, f'Marked {queryset.count()} feedback submissions as unresolved.')

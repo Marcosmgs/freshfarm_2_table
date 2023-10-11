@@ -35,7 +35,7 @@ body {
 
 /* Colours */
 
-#fav-i-color{
+.fav-i-color{
     color: #E55B7E;
 }
 
@@ -47,7 +47,7 @@ body {
     color: #E55B7E;
 }
 
-#bag-i-color{
+.bag-i-color{
     color: #3E5336;
 }
 
@@ -55,7 +55,7 @@ body {
     color: #3E5336;
 }
 
-#account-i-color{
+.account-i-color{
     color: #F6DA73;
 }
 
@@ -63,7 +63,7 @@ body {
     color: #F6DA73;
 }
 
-#search-i-color{
+.search-i-color{
     color: #948F47;
 }
 

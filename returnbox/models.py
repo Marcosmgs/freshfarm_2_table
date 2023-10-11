@@ -30,3 +30,9 @@ class Feedback(models.Model):
 
     def __str__(self):
         return self.subject
+
+
+class NewsletterSubscriber(models.Model):
+    email = models.EmailField(unique=True)
+    name = models.CharField(max_length=255)
+    subscribed_at = models.DateTimeField(auto_now_add=True)

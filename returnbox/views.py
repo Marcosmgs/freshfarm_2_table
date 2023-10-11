@@ -6,6 +6,7 @@ import datetime
 from django.contrib.auth.decorators import login_required
 from django.urls import reverse
 from .models import Feedback
+from .models import NewsletterSubscriber 
 from .forms import FeedbackForm
 from .forms import NewsletterSubscriptionForm
 
@@ -122,5 +123,18 @@ def submit_feedback(request):
 
 
 def subscribe_newsletter(request):
-    form = NewsletterSubscriptionForm()
+
+    if request.method == 'POST':
+        form = NewsletterSubscriptionForm(request.POST)
+        if form.is_valid():
+            email = form.cleaned_data['email']
+            # Check if the email is already subscribed
+            if not NewsletterSubscriber.objects.filter(email=email).exists():
+                form.save()
+                messages.success(request, 'Subscribed with success')
+                return redirect('returnbox')
+            else:
+                messages.warning(request, 'This email is already subscribed.')
+    else:
+        form = NewsletterSubscriptionForm()
     return render(request, 'returnbox/subscribe.html', {'form': form})

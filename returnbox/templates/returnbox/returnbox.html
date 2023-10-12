@@ -76,9 +76,8 @@
                 <p>
                     You have no boxes to be return, check out our fresh 
                     farm box selection of products with returnable 
-                    boxes option so you can earn money to use 
+                    boxes option so you can request to return the empty boxes 
                     in your next shopping and save the planet!
-                    BOX BALANCE {{ user_profile.box_balance }}
                 </p>
                 <a href="{% url 'products' %}?category=family_box,medium_box,small_box" class="btn btn-outline-green rounded-1 btn-lg">
                     <span class="icon">
@@ -110,7 +109,6 @@
                                 <th>Requested to Return</th>
                                 <th>Status</th>
                                 <th>Cancel</th>
-                                <!-- Add more table headings for other details if needed -->
                             </tr>
                         </thead>
                         <tbody>
@@ -125,7 +123,6 @@
                                 <td></td>
                                 <td></td>
                                 {% endif %}
-                                <!-- Add more table cells for other details if needed -->
                             </tr>
                             {% empty %}
                             <tr>
@@ -137,20 +134,24 @@
                 </div>
             </div>
         </div>
-        <div class="row" style="height: calc(85vh - 164px)">
+        <div class="row" style="height: calc(50vh - 164px)">
             <div class="col">
-                <p class="text-muted">Kindly Submit a Feedback to Improve this Tool.</p>
-                <hr class="my-0">
-                <a href="{% url 'feedback' %}" class="btn btn-outline-green mb-4">
-                    <span class="text-uppercase">Feedback</span>
-                </a>
+                <hr class="mt-3">
+                <p class="text-muted mt-2">Kindly Submit a Feedback 
+                    <a href="{% url 'feedback' %}" class="text-decoration-none">
+                        <span class="text-light bg-dark">here</span>
+                    </a>
+                to Improve this Tool.
+                </p>
             </div>
             <div class="col">
-                <p class="text-muted">Sign Up to our Box Return Newsletter.</p>
-                <hr class="my-0">
-                <a href="{% url 'subscribe_newsletter' %}" class="btn btn-outline-green mb-4">
-                    <span class="text-uppercase">Keep me Updated!</span>
-                </a>
+                <hr class="mt-3">
+                <p class="text-muted mt-2">Sign Up  
+                    <a href="{% url 'subscribe_newsletter' %}" class="text-decoration-none mb-4">
+                        <span class="text-light bg-dark">here</span>
+                    </a>     
+                to our Box Return Newsletter.
+                </p>
             </div>    
         </div>
     </div>

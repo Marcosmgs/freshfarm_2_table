@@ -35,8 +35,9 @@ body {
 
 /* Colours */
 
-.fav-i-color{
+#fav-i-color > i {
     color: #E55B7E;
+
 }
 
 .product-fav-i-color{
@@ -47,16 +48,18 @@ body {
     color: #E55B7E;
 }
 
-.bag-i-color{
+#bag-i-color > i {
     color: #3E5336;
+
 }
 
 #bag-i-color-lg{
     color: #3E5336;
 }
 
-.account-i-color{
+#account-i-color > i {
     color: #F6DA73;
+
 }
 
 #account-i-color-lg{
@@ -283,7 +286,7 @@ a.category-badge > span.badge:hover {
 }
 
 /* Slightly smaller nav on XS mobile screens */
-@media (max-width: 358px) {
+@media (max-width: 392px) {
     #grand-total-mobile {
         font-size: 0.5rem;
     }

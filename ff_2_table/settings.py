@@ -28,7 +28,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.environ.get('SECRET_KEY', 'thisismysecretkeysupersecret')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['fresh-farm-2-table-270bbb259c1e.herokuapp.com',
                  '8000-marcosmgs-freshfarm2tab-sj6req1cfp7.ws-eu105.gitpod.io']

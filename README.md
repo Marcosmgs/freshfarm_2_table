@@ -435,6 +435,26 @@ Entity relationship diagram was created using [Figma](https://www.figma.com/).
 * A checkout success page displays after successfully completing an order. It displays order details and provides options for users to navigate back to their profile or explore more offers.
 * This Checkout Success page provides users with an overview of their order details and confirms the successful completion of their order.
 
+#### **- New Return Box Feature**
+![New Return](Docs/Readme_images/features/new_feature_return_box.png)
+* We're excited to introduce our new Box Return feature.
+* Now, you can easily return your empty boxes and be a part of the solution to reduce waste and protect our planet.
+
+#### **- Return Box Tool**
+![Return Box](Docs/Readme_images/features/return_box_tool.png)
+* Use our Box Return Tool to send back your empty boxes, and we'll ensure they're reused in a sustainable cycle.
+* By participating, you're not only making your life more convenient but also contributing to a cleaner environment and a greener future for all.
+* Start returning today and be a part of the change!"
+
+#### **- Feedback Tool Improvement**
+![Feedback](Docs/Readme_images/features/feedback_improve_tool.png)
+* We value your input more than anything. Our Box Return Tool is designed with your convenience in mind.
+* Feedback plays a crucial role in making any tool even better.
+
+#### **- New Features Newsletter**
+![New Features](Docs/Readme_images/features/newsletter_tool.png)
+* Stay in the Loop with Our Newsletter.
+* Admin can download a list of all user subscribed to send offers and new regarding this new feature.
 
 #### **Management Products**
 * Allows superusers to add new products to the website.

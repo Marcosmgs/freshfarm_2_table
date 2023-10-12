@@ -66,6 +66,10 @@ body {
     color: #F6DA73;
 }
 
+#search-i-color > i {
+    color: #948F47;
+}
+
 .search-i-color{
     color: #948F47;
 }

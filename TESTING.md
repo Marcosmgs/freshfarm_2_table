@@ -301,20 +301,72 @@ No Unfixed Bugs left behind ;)
 All html pages have been run through the [W3C HTML Validator](https://validator.w3.org/) and the below results were returned.
 
 **-HTML Checker**
-* Erros = 1. Element li not allowed as child of element nav in this context. (Suppressing further errors from this subtree.)
-* Warnings = None.
+No Errors Found
+45 Warnings Most are from Javascript tags which does not affecte the page.
 
-![HTML CHECKER](Docs/Readme_images/testing/html_checker.png)
+**- add-product.html**
+* Erros = None.
+![test html](Docs/Readme_images/testing/add_product_page_html.png)
+
+**- bag.html**
+* Erros = None.
+![test html](Docs/Readme_images/testing/bag_page_html.png)
+
+**- checkout.html**
+* Erros = None.
+![test html](Docs/Readme_images/testing/checkout_page_html.png)
+
+**- checkout-success.html**
+* Erros = None.
+![test html](Docs/Readme_images/testing/checkout_success_page_html.png)
+
+**- edit-product.html**
+* Erros = None.
+![test html](Docs/Readme_images/testing/edit_product_page_html.png)
+
+**- feedback.html**
+* Erros = None.
+![test html](Docs/Readme_images/testing/feedback_page_html.png)
+
+**- home.html**
+* Erros = None.
+![test html](Docs/Readme_images/testing/landing_page_html.png)
+
+ **- favourites.html**
+* Erros = None.
+![test html](Docs/Readme_images/testing/my_favourites_page_html.png)
+
+**- profile.html**
+* Erros = None.
+![test html](Docs/Readme_images/testing/my_profile_page_html.png)
+
+**- product-details.html**
+* Erros = None.
+![test html](Docs/Readme_images/testing/product_details_page_html.png)
+
+**- product.html**
+* Erros = None.
+![test html](Docs/Readme_images/testing/product_page_html.png)
+
+**- registration.html**
+* Erros = None.
+![test html](Docs/Readme_images/testing/registratio_page_html.png)
+
+**- signin.html**
+* Erros = None.
+![test html](Docs/Readme_images/testing/sign_in_page_html.png)
+
+**- newsletter.html**
+* Erros = None.
+![test html](Docs/Readme_images/testing/newsletter_page.png)
+
+**- newsletter.html**
+* Erros = None.
+![test html](Docs/Readme_images/testing/return_box_page.png)
 
 All pages within the project have undergone thorough validation using an HTML checker to ensure their compliance with standards. 
 
-The validation process yielded positive results, with no warnings being raised across all pages. 
-
-However, during this validation, an error was identified related to an element used in a separate file dedicated to ensuring optimal responsiveness of the pages. 
-
-Despite efforts to resolve this issue using the guidance provided by the W3C, attempts to rectify the error were met with challenges, as it was breaking the responsivennes of the page.
-
-As a result, it was determined that maintaining the web responsiveness, which plays a pivotal role in delivering a smooth UX, takes precedence over addressing the specific error. This approach ensures that the overall page navigation and user interaction remain unaffected while upholding the high standards of web responsiveness that have been established.
+Overall The validation process yielded positive results and no erros.
 
 ## Jigsaw CSS VALIDATION
 No errors or warnings are returned when passing the styles.css through the [Jigsaw CSS Validator](https://jigsaw.w3.org/css-validator/).

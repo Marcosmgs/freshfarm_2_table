@@ -157,6 +157,11 @@ body {
     overflow-y: auto;
 }
 
+.feedback-history {
+    max-height: 316px;
+    overflow-y: auto;
+}
+
 .overlay {
 	height: 100%;
 	width: 100%;

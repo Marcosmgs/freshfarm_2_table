@@ -303,7 +303,18 @@ a.category-badge > span.badge:hover {
     #banner h4 {
         font-size: 0.8rem;
     }
-    
+    #fav-i-color > i {
+        font-size: 1rem;
+    }    
+    #bag-i-color > i {
+        font-size: 1rem;
+    }
+    #account-i-color > i {
+        font-size: 1rem;
+    }
+    #search-i-color > i {
+        font-size: 1rem;
+    }
 }
 
 /* pad the top a bit when navbar is collapsed on mobile */
